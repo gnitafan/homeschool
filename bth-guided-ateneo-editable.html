@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Better Together Homeschool International | Weekly Guided Homeschooling — 1 Hour That Changes Everything</title>
+<meta name="description" content="Introducing BTHI Weekly Guided Homeschooling — one focused, BTHI-directed hour per week where certified guides follow a personalised plan built for your child's unique needs and learning style. DepEd-aligned. Fully online. Affordable.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Outfit',sans-serif!important;}</style>
+<style>
+
+/* ══════════════════════════════════════
+   BETTER TOGETHER GUIDED HOMESCHOOLING — TOKENS
+   Palette: Ateneo Blue · Gold · Ivory
+══════════════════════════════════════ */
+:root {
+  /* ── Ateneo Blue family ── */
+  --forest:     #003d80;   /* primary Ateneo blue  */
+  --forest2:    #004fa3;   /* slightly lighter blue */
+  --forest3:    #1a6abf;   /* accent blue          */
+  --forest-lt:  #ddeaf9;   /* pale blue tint       */
+  --forest-pale:#eef4fc;   /* lightest blue wash   */
+
+  /* ── Gold family ── */
+  --sun:        #c8a415;   /* primary Ateneo gold  */
+  --sun2:       #ddb824;   /* bright gold          */
+  --sun3:       #f0d050;   /* light gold highlight */
+  --sun-pale:   #fdf6d8;   /* pale gold background */
+  --sun-deep:   #a07c08;   /* deep gold / pressed  */
+
+  /* ── Urgency / accent (deep amber-gold) ── */
+  --peach:      #b87e10;   /* replaces coral — deep gold-amber */
+  --peach2:     #d09420;   /* lighter amber        */
+  --peach-pale: #fdf0c8;   /* very pale amber      */
+
+  /* ── Secondary blue (replaces sky) ── */
+  --sky:        #1a5fa8;
+  --sky-lt:     #e8f0f9;
+
+  /* ── Neutrals ── */
+  --ivory:      #fafbff;   /* very slight blue-white tint */
+  --warm:       #f4f6fc;   /* warm blue-white      */
+  --linen:      #eaeef8;   /* blue-tinted linen    */
+  --bark:       #0d1a2e;   /* deep navy text       */
+  --bark2:      #1a2a42;   /* secondary dark text  */
+  --body:       #3a4a6a;   /* body text            */
+  --muted:      #6a7a98;   /* muted text           */
+  --border:     #c8d4e8;   /* blue-tinted border   */
+  --white:      #ffffff;
+
+  --r: 12px;
+  --r2: 20px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Outfit', sans-serif;
+  background:var(--ivory);
+  color:var(--bark);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ══════ URGENCY BAR ══════ */
+.urgency {
+  background:#001a40;
+  color:#fff;
+  text-align:center;
+  padding:11px 20px;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  position:sticky; top:0; z-index:500;
+  border-bottom:3px solid var(--sun);
+}
+.tc { display:inline-flex; gap:4px; align-items:center; margin-left:8px; }
+.tb {
+  background:rgba(0,0,0,.18);
+  border-radius:6px;
+  padding:2px 9px;
+  font-size:.9rem; font-weight:800;
+  min-width:34px; text-align:center;
+}
+
+/* ══════ HEADER ══════ */
+.hdr {
+  background:var(--forest);
+  padding:14px 36px;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px;
+  border-bottom:3px solid var(--sun);
+}
+.hdr-brand {
+  display:flex; align-items:center; gap:12px;
+}
+.hdr-icon {
+  width:44px; height:44px; border-radius:10px;
+  background:var(--sun);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.4rem; flex-shrink:0;
+}
+.brand-name {
+  font-family:'Fraunces', serif;
+  font-size:1.2rem; font-weight:700;
+  color:#fff; line-height:1.1;
+}
+.brand-name span { color:var(--sun2); font-style:italic; }
+.brand-sub { font-size:.58rem; color:rgba(255,255,255,.55); letter-spacing:.12em; text-transform:uppercase; margin-top:2px; }
+.hdr-badge {
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:20px; padding:5px 16px;
+  font-size:.65rem; font-weight:700;
+  color:rgba(255,255,255,.8); letter-spacing:.08em; text-transform:uppercase;
+}
+
+/* ══════ HERO ══════ */
+.hero {
+  background:var(--forest);
+  padding:80px 24px 0;
+  position:relative; overflow:hidden;
+  text-align:center;
+}
+/* Wavy bottom */
+.hero-wave {
+  display:block; width:100%; height:80px;
+  background:var(--forest);
+  position:relative; margin-top:64px;
+}
+.hero-wave::after {
+  content:'';
+  position:absolute; bottom:0; left:0; right:0;
+  height:80px;
+  background:var(--ivory);
+  clip-path:ellipse(55% 100% at 50% 100%);
+}
+
+/* Dot pattern background */
+.hero::before {
+  content:'';
+  position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(circle, rgba(200,164,21,.12) 1px, transparent 1px);
+  background-size:24px 24px;
+}
+
+/* Decorative gold accent — Ateneo diagonal */
+.hero::after {
+  content:'';
+  position:absolute;
+  top:0; right:0;
+  width:340px; height:100%;
+  background:linear-gradient(135deg, transparent 40%, rgba(200,164,21,.06) 100%);
+  pointer-events:none;
+}
+
+.hero-inner { position:relative; z-index:1; max-width:860px; margin:0 auto; }
+
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:40px; padding:7px 20px;
+  font-size:.68rem; font-weight:700;
+  color:var(--sun2); letter-spacing:.1em; text-transform:uppercase;
+  margin-bottom:28px;
+  animation:riseUp .65s ease both;
+}
+.hero h1 {
+  font-family:'Fraunces', serif;
+  font-size:clamp(2.2rem,5.5vw,4rem);
+  font-weight:700; color:#fff; line-height:1.1;
+  margin-bottom:12px;
+  animation:riseUp .65s .1s ease both;
+}
+.hero h1 em { font-style:italic; color:var(--sun2); }
+.hero-sub {
+  font-family:'Fraunces', serif;
+  font-size:clamp(1.1rem,2.4vw,1.45rem);
+  font-weight:300; font-style:italic;
+  color:rgba(255,255,255,.65); margin-bottom:28px;
+  animation:riseUp .65s .18s ease both;
+}
+.hero-proof {
+  font-size:clamp(.88rem,1.8vw,1rem);
+  color:rgba(255,255,255,.7);
+  max-width:680px; margin:0 auto 36px;
+  font-weight:400; line-height:1.75;
+  animation:riseUp .65s .26s ease both;
+}
+.hero-proof strong { color:var(--sun3); }
+
+/* Big hour callout */
+.hour-callout {
+  display:inline-flex; align-items:center; gap:20px;
+  background:rgba(255,255,255,.08);
+  border:1.5px solid rgba(255,255,255,.18);
+  border-radius:var(--r2); padding:20px 32px;
+  margin-bottom:36px;
+  animation:riseUp .65s .32s ease both;
+  flex-wrap:wrap; justify-content:center;
+}
+.hc-item { text-align:center; }
+.hc-num {
+  font-family:'Fraunces', serif;
+  font-size:2.8rem; font-weight:900;
+  color:var(--sun2); line-height:1;
+}
+.hc-label { font-size:.62rem; color:rgba(255,255,255,.5); letter-spacing:.1em; text-transform:uppercase; margin-top:4px; }
+.hc-sep { font-size:1.5rem; color:rgba(255,255,255,.2); font-weight:300; }
+
+.hero-pills {
+  display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+  margin-bottom:40px;
+  animation:riseUp .65s .38s ease both;
+}
+.hpill {
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:40px; padding:6px 16px;
+  font-size:.68rem; font-weight:600; color:rgba(255,255,255,.8);
+  display:flex; align-items:center; gap:6px;
+}
+
+@keyframes riseUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+
+/* ══════ CTA BUTTONS ══════ */
+.btn {
+  display:inline-block;
+  background:linear-gradient(135deg, var(--sun) 0%, var(--sun2) 50%, var(--sun) 100%);
+  background-size:200% 100%;
+  color:var(--bark);
+  font-size:.95rem; font-weight:800;
+  padding:17px 36px; border-radius:var(--r);
+  text-decoration:none; cursor:pointer; border:none;
+  box-shadow:0 6px 24px rgba(200,164,21,.35);
+  transition:background .2s, transform .2s, box-shadow .2s;
+  line-height:1.35;
+}
+.btn:hover { background:var(--sun2); transform:translateY(-2px); box-shadow:0 10px 32px rgba(200,164,21,.45); }
+.btn-outline {
+  display:inline-block;
+  background:transparent;
+  border:2px solid var(--forest);
+  color:var(--forest);
+  font-size:.95rem; font-weight:700;
+  padding:16px 36px; border-radius:var(--r);
+  text-decoration:none; cursor:pointer;
+  transition:background .2s, color .2s;
+  line-height:1.35;
+}
+.btn-outline:hover { background:var(--forest); color:#fff; }
+.btn-note { display:block; font-size:.72rem; color:rgba(255,255,255,.42); margin-top:10px; text-align:center; font-weight:500; }
+.btn-note.lt { color:var(--muted); }
+.btn-pair { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; align-items:center; }
+
+/* ══════ WIN MARQUEE ══════ */
+.mq-wrap {
+  background:var(--forest);
+  padding:14px 0; overflow:hidden;
+}
+.mq-track {
+  display:flex; gap:0; width:max-content;
+  animation:scrollx 30s linear infinite;
+}
+.mq-track:hover { animation-play-state:paused; }
+@keyframes scrollx { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+.mq-item {
+  display:flex; align-items:center; gap:10px;
+  padding:0 28px; border-right:1px solid rgba(255,255,255,.15);
+  white-space:nowrap;
+}
+.mq-emoji { font-size:.95rem; }
+.mq-text { font-size:.73rem; font-weight:600; color:rgba(255,255,255,.82); }
+.mq-text strong { color:var(--sun2); }
+
+/* ══════ BONUS TIMER ══════ */
+.bonus-timer {
+  background:var(--forest);
+  text-align:center; padding:36px 20px;
+  border-top:3px solid var(--sun);
+}
+.bonus-timer h3 {
+  font-family:'Fraunces', serif;
+  font-size:1.3rem; font-style:italic;
+  color:#fff; margin-bottom:20px;
+}
+.big-timer { display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+.bt-u { text-align:center; min-width:80px; }
+.bt-n {
+  background:rgba(255,255,255,.12);
+  border-radius:10px; padding:12px 18px;
+  font-family:'Fraunces', serif;
+  font-size:2.6rem; font-weight:900; color:var(--sun2); line-height:1;
+  display:block;
+}
+.bt-l { font-size:.58rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-top:6px; }
+
+/* ══════ SECTION BASE ══════ */
+.sec { padding:84px 24px; }
+.wrap { max-width:940px; margin:0 auto; }
+.wrapN { max-width:700px; margin:0 auto; }
+
+.sec-label {
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:12px;
+}
+.sec-rule { width:24px; height:3px; border-radius:2px; background:var(--sun); }
+.sec-label-text {
+  font-size:.65rem; font-weight:800;
+  letter-spacing:.15em; text-transform:uppercase;
+  color:var(--sun-deep);
+}
+.htitle {
+  font-family:'Fraunces', serif;
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  font-weight:700; line-height:1.12; margin-bottom:18px;
+}
+.htitle em { font-style:italic; color:var(--forest2); }
+.htitle .sun { color:var(--sun); }
+.body-rule { width:40px; height:4px; border-radius:2px; background:var(--sun); margin-bottom:28px; }
+
+/* Dark forest section */
+.sec-forest { background:var(--forest); }
+.sec-forest2 { background:var(--forest2); }
+.sec-warm { background:var(--warm); }
+.sec-linen { background:var(--linen); }
+.sec-sun-pale { background:var(--sun-pale); }
+.sec-forest-pale { background:var(--forest-pale); }
+
+/* ══════ PAIN LIST ══════ */
+.pain-list { list-style:none; max-width:640px; margin:0 auto 32px; }
+.pain-list li {
+  padding:13px 0 13px 40px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:relative; font-size:.96rem;
+  color:rgba(255,255,255,.75); line-height:1.6;
+}
+.pain-list li:last-child { border:none; }
+.pain-list li::before { content:'😞'; position:absolute; left:0; top:12px; font-size:.9rem; }
+
+.insight-box {
+  background:rgba(200,164,21,.12);
+  border-left:4px solid var(--sun);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:24px 28px; max-width:640px; margin:0 auto;
+}
+.insight-box p { color:rgba(255,255,255,.65); font-size:.93rem; margin-bottom:8px; }
+.insight-box .big {
+  font-family:'Fraunces', serif;
+  font-size:1.3rem; font-style:italic;
+  color:var(--sun2);
+}
+
+/* ══════ COMPARE ══════ */
+.cmp-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:0; border:2px solid var(--border);
+  border-radius:var(--r2); overflow:hidden; margin-top:36px;
+}
+.cp { padding:32px 28px; }
+.cp.bad { background:#f5f7fd; border-right:1px solid var(--border); }
+.cp.good { background:var(--forest-pale); }
+.cp h4 { font-family:'Fraunces',serif; font-size:1.1rem; font-weight:700; margin-bottom:18px; }
+.cp.bad h4 { color:var(--peach); }
+.cp.good h4 { color:var(--forest); }
+.ci { display:flex; gap:10px; margin-bottom:11px; font-size:.9rem; color:var(--body); line-height:1.55; }
+.ci .ic { flex-shrink:0; margin-top:2px; }
+.cmp-verdict {
+  font-family:'Fraunces', serif;
+  font-style:italic; font-size:1.2rem;
+  color:var(--bark); text-align:center; margin-top:28px;
+}
+
+/* ══════ SYSTEM STEPS ══════ */
+.sys-row {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(155px,1fr));
+  gap:0; border:2px solid var(--border);
+  border-radius:var(--r2); overflow:hidden; margin-top:36px;
+  background:var(--border);
+}
+.sys-step {
+  padding:28px 20px; text-align:center;
+  background:var(--white); position:relative;
+}
+.snum {
+  width:48px; height:48px;
+  background:var(--forest); color:var(--sun2);
+  font-family:'Fraunces', serif; font-size:1.3rem; font-weight:700;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 14px;
+}
+.sys-step h4 { font-size:.83rem; font-weight:800; color:var(--bark); margin-bottom:6px; line-height:1.3; }
+.sys-step p { font-size:.73rem; color:var(--body); line-height:1.6; }
+.sarrow {
+  position:absolute; top:50%; right:-13px; transform:translateY(-50%);
+  background:var(--sun); color:var(--bark);
+  width:24px; height:24px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.72rem; font-weight:800; z-index:1;
+}
+
+/* ══════ SUBJECT CARDS ══════ */
+.subject-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:14px; margin-top:36px;
+}
+.subject-card {
+  background:var(--white); border:2px solid var(--border);
+  border-radius:var(--r2); padding:24px 18px; text-align:center;
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+  cursor:default;
+}
+.subject-card:hover { transform:translateY(-4px); border-color:var(--sun); box-shadow:0 10px 28px rgba(0,61,128,.12); }
+.subject-card .sico { font-size:2.2rem; margin-bottom:12px; }
+.subject-card h4 { font-family:'Fraunces',serif; font-size:1rem; font-weight:700; color:var(--forest); margin-bottom:6px; }
+.subject-card p { font-size:.76rem; color:var(--body); line-height:1.55; }
+.subject-card .slevel { font-size:.62rem; font-weight:700; color:var(--sun-deep); margin-top:8px; letter-spacing:.06em; text-transform:uppercase; }
+
+/* ══════ WHO FOR ══════ */
+.who-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(265px,1fr));
+  gap:16px; margin-top:36px;
+}
+.wcard {
+  background:var(--white); border:2px solid var(--border);
+  border-radius:var(--r2); padding:28px 22px;
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+}
+.wcard:hover { transform:translateY(-3px); border-color:var(--sun); box-shadow:0 10px 28px rgba(0,61,128,.1); }
+.wcard .wico { font-size:2rem; margin-bottom:12px; }
+.wcard h4 { font-family:'Fraunces',serif; font-size:1.05rem; font-weight:700; color:var(--forest); margin-bottom:10px; }
+.wcard ul { list-style:none; }
+.wcard ul li {
+  font-size:.83rem; color:var(--body); line-height:1.6;
+  padding:5px 0 5px 20px; position:relative;
+  border-bottom:1px solid var(--border);
+}
+.wcard ul li:last-child { border:none; }
+.wcard ul li::before { content:'✓'; position:absolute; left:0; color:var(--sun); font-weight:800; }
+
+.notfor {
+  background:var(--forest-pale); border:2px solid var(--border);
+  border-radius:var(--r2); padding:26px 28px;
+  max-width:620px; margin:32px auto 0;
+}
+.notfor h4 { font-family:'Fraunces',serif; font-size:1rem; color:var(--forest); margin-bottom:12px; font-style:italic; }
+.notfor ul { list-style:none; }
+.notfor ul li { font-size:.85rem; color:var(--body); padding:5px 0 5px 22px; position:relative; }
+.notfor ul li::before { content:'✗'; position:absolute; left:0; color:var(--sun-deep); font-weight:700; }
+
+/* ══════ MISTAKES ══════ */
+.mblock { background:var(--white); border:2px solid var(--border); border-radius:var(--r2); overflow:hidden; margin-bottom:18px; }
+.mhead { background:var(--forest); color:#fff; padding:14px 24px; font-family:'Fraunces',serif; font-size:1rem; font-weight:700; }
+.mbody { display:grid; grid-template-columns:1fr 1fr; }
+.mbad, .mgood { padding:22px 24px; }
+.mbad { background:var(--forest-pale); border-right:1px solid var(--border); }
+.mgood { background:var(--forest-pale); }
+.mlbl { font-size:.65rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+.mbad .mlbl { color:var(--sun-deep); }
+.mgood .mlbl { color:var(--forest2); }
+.mbad p, .mgood p { font-size:.87rem; color:var(--body); line-height:1.65; }
+.mgood p { color:var(--bark); }
+.mresult { font-size:.76rem; color:var(--sun-deep); font-style:italic; margin-top:10px; padding-top:10px; border-top:1px dashed var(--border); font-weight:600; }
+
+/* ══════ INCLUDES ══════ */
+.inc-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; margin-top:36px; }
+.icard { background:var(--white); border:2px solid var(--border); border-radius:var(--r2); padding:20px 18px; display:flex; gap:14px; align-items:flex-start; transition:border-color .2s; }
+.icard:hover { border-color:var(--sun); }
+.iico { width:46px; height:46px; flex-shrink:0; background:var(--forest-pale); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+.icard h5 { font-family:'Fraunces',serif; font-size:.97rem; font-weight:700; color:var(--forest); margin-bottom:4px; }
+.icard p { font-size:.79rem; color:var(--body); margin-bottom:6px; line-height:1.6; }
+.ival { font-size:.7rem; font-weight:800; color:var(--forest2); letter-spacing:.04em; text-transform:uppercase; }
+
+/* Value table */
+.val-tbl { background:var(--forest-pale); border:2px solid rgba(200,164,21,.3); border-radius:var(--r2); padding:28px; max-width:560px; margin:36px auto 0; }
+.val-tbl h4 { font-family:'Fraunces',serif; font-size:1.1rem; color:var(--forest); margin-bottom:18px; text-align:center; font-weight:700; }
+.vr { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(200,164,21,.2); font-size:.86rem; }
+.vr:last-of-type { border:none; }
+.vi { color:var(--body); }
+.vp { font-weight:800; color:var(--forest2); }
+.vtot { display:flex; justify-content:space-between; padding:14px 0 0; font-weight:800; font-size:1rem; border-top:2px solid rgba(200,164,21,.3); margin-top:6px; }
+.vtot .old { color:var(--peach); text-decoration:line-through; }
+.inv-hl { text-align:center; margin-top:18px; }
+.inv-hl .bigp { font-family:'Fraunces', serif; font-size:2.6rem; font-weight:900; color:var(--forest); line-height:1.1; }
+.inv-hl .bigp em { font-style:italic; color:var(--sun); }
+.inv-hl p { font-size:.82rem; color:var(--body); margin-top:6px; }
+
+/* ══════ TESTIMONIALS ══════ */
+.tgrid { display:grid; grid-template-columns:repeat(auto-fit, minmax(270px,1fr)); gap:18px; margin-top:32px; }
+.tcard {
+  background:var(--forest);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r2); padding:26px 22px;
+  border-top:4px solid var(--sun);
+}
+.tcard .stars { color:var(--sun2); margin-bottom:10px; font-size:.95rem; }
+.tcard .qt { font-family:'Fraunces',serif; font-size:1rem; font-style:italic; font-weight:300; color:rgba(255,255,255,.82); line-height:1.68; margin-bottom:18px; }
+.tauthor { display:flex; align-items:center; gap:10px; padding-top:16px; border-top:1px solid rgba(255,255,255,.1); }
+.tav { width:38px; height:38px; border-radius:50%; background:var(--sun); display:flex; align-items:center; justify-content:center; font-weight:800; color:var(--bark); font-size:.8rem; flex-shrink:0; }
+.tname { font-weight:700; color:#fff; font-size:.86rem; }
+.trole { font-size:.7rem; color:rgba(255,255,255,.42); margin-top:2px; }
+
+/* ══════ ROI ══════ */
+.roi-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:2px; margin-top:36px; background:var(--border); border-radius:var(--r2); overflow:hidden; max-width:820px; margin-left:auto; margin-right:auto; }
+.rcard { padding:24px 18px; text-align:center; background:var(--white); }
+.rcard.hi { background:var(--forest); }
+.rcard .re { font-size:1.8rem; margin-bottom:10px; }
+.rcard h4 { font-family:'Fraunces',serif; font-size:.97rem; font-weight:700; margin-bottom:6px; color:var(--bark); font-style:italic; }
+.rcard p { font-size:.77rem; color:var(--body); line-height:1.55; }
+.rcard .pot { display:inline-block; background:var(--sun-pale); border-radius:20px; padding:3px 10px; font-size:.68rem; font-weight:800; color:var(--sun-deep); margin-top:10px; text-transform:uppercase; letter-spacing:.06em; }
+.rcard.hi h4 { color:#fff; }
+.rcard.hi p { color:rgba(255,255,255,.6); }
+.rcard.hi .pot { background:var(--sun); color:var(--bark); }
+
+/* ══════ PRICING BOX ══════ */
+.price-box { background:var(--white); border:3px solid var(--forest);
+  box-shadow:0 4px 0 0 var(--sun), 0 14px 50px rgba(0,61,128,.1); border-radius:var(--r2); padding:50px 44px; text-align:center; max-width:580px; margin:40px auto 0; box-shadow:0 14px 50px rgba(0,61,128,.1); position:relative; }
+.price-ribbon { position:absolute; top:-16px; left:50%; transform:translateX(-50%); background:var(--sun); color:var(--bark); font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; padding:6px 22px; border-radius:40px; white-space:nowrap; }
+.price-was { font-size:.88rem; color:var(--muted); text-decoration:line-through; margin-bottom:4px; }
+.price-now { font-family:'Fraunces',serif; font-size:3.6rem; font-weight:900; color:var(--forest); line-height:1; }
+.price-now sup { font-size:1.4rem; vertical-align:top; margin-top:.5rem; }
+.price-freq { font-size:.78rem; color:var(--muted); margin-bottom:6px; }
+.price-sub { font-size:.82rem; color:var(--body); margin-bottom:28px; }
+
+/* ══════ GUARANTEE ══════ */
+.guarantee { display:flex; gap:18px; align-items:flex-start; background:var(--sun-pale); border:2px solid var(--sun); border-radius:var(--r2); padding:26px 28px; max-width:680px; margin:36px auto; }
+.gico { font-size:2.2rem; flex-shrink:0; }
+.guarantee h4 { font-family:'Fraunces',serif; font-size:1.1rem; font-weight:700; color:var(--forest); margin-bottom:8px; }
+.guarantee p { font-size:.87rem; color:var(--body); }
+
+/* ══════ FAQ ══════ */
+.faq-list { max-width:720px; margin:36px auto 0; text-align:left; }
+.faq-item { border-bottom:2px solid var(--border); padding:20px 0; }
+.faq-q { font-family:'Fraunces',serif; font-size:1.05rem; color:var(--forest); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:12px; font-weight:700; }
+.faq-q::after { content:'+'; color:var(--sun); font-size:1.2rem; flex-shrink:0; font-family:'Plus Jakarta Sans',sans-serif; }
+.faq-q.open { margin-bottom:10px; }
+.faq-q.open::after { content:'−'; }
+.faq-a { font-size:.88rem; color:var(--body); line-height:1.75; display:none; }
+.faq-a.show { display:block; }
+
+/* ══════ FINAL CTA ══════ */
+.final-cta { background:var(--forest); padding:92px 24px; text-align:center; position:relative; overflow:hidden; }
+.final-cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle, rgba(200,164,21,.12) 1px, transparent 1px); background-size:22px 22px; pointer-events:none; }
+.final-cta::after { content:''; position:absolute; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(200,164,21,.1) 0%, transparent 65%); top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none; }
+.fc-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+.final-cta h2 { font-family:'Fraunces',serif; font-size:clamp(2rem,4.8vw,3.2rem); font-weight:700; color:#fff; line-height:1.12; margin-bottom:14px; }
+.final-cta h2 em { font-style:italic; color:var(--sun2); }
+.final-cta p { color:rgba(255,255,255,.65); max-width:520px; margin:0 auto 36px; font-size:.97rem; }
+
+/* ══════ FOOTER ══════ */
+.footer { background:#001a40; color:rgba(255,255,255,.35); text-align:center; padding:28px 20px; font-size:.76rem; }
+.footer a { color:var(--sun2); text-decoration:none; }
+
+/* ══════ CTA ROWS ══════ */
+.cta-row { padding:52px 24px; text-align:center; }
+.cta-row.warm { background:var(--warm); }
+.cta-row.sun { background:var(--sun-pale); }
+.cta-row.dark { background:var(--forest); }
+.cta-row.linen { background:var(--linen); }
+
+/* ══════ BIO ══════ */
+.bio-wrap { display:grid; grid-template-columns:160px 1fr; gap:36px; align-items:start; max-width:820px; margin:0 auto; }
+.bio-av { width:160px; height:160px; border-radius:var(--r2); background:linear-gradient(135deg, var(--forest), var(--forest2)); display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0; border:4px solid var(--sun-pale); box-shadow:0 8px 28px rgba(0,61,128,.22); gap:6px; }
+.bio-av .av-ico { font-size:2.8rem; }
+.bio-av .av-name { font-family:'Fraunces',serif; font-size:.75rem; font-weight:700; color:#fff; letter-spacing:.06em; text-align:center; line-height:1.2; }
+.bio-name { font-family:'Fraunces',serif; font-size:1.8rem; font-weight:700; color:var(--forest); margin-bottom:4px; }
+.bio-title { font-size:.72rem; font-weight:700; color:var(--sun); margin-bottom:14px; letter-spacing:.1em; text-transform:uppercase; }
+.bio-body { font-size:.9rem; color:var(--body); line-height:1.78; margin-bottom:14px; }
+.bio-badges { display:flex; gap:8px; flex-wrap:wrap; }
+.bbadge { background:var(--forest-pale); border:1.5px solid rgba(0,61,128,.2); border-radius:20px; padding:5px 14px; font-size:.68rem; font-weight:700; color:var(--forest); }
+
+/* ══════ RESPONSIVE ══════ */
+@media(max-width:680px){
+  .cmp-grid,.mbody { grid-template-columns:1fr; }
+  .cp.bad,.mbad { border-right:none; border-bottom:1px solid var(--border); }
+  .sys-row { grid-template-columns:1fr; }
+  .sys-step { border-bottom:1px solid var(--border); }
+  .sys-step:last-child { border-bottom:none; }
+  .sarrow { display:none; }
+  .bio-wrap { grid-template-columns:1fr; text-align:center; }
+  .bio-av { margin:0 auto; }
+  .bio-badges { justify-content:center; }
+  .guarantee { flex-direction:column; }
+  .price-box { padding:40px 20px; }
+  .hdr { padding:14px 20px; }
+  .hour-callout { gap:14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     URGENCY BAR
+══════════════════════════════════════════ -->
+<div class="urgency">
+  🎉 &nbsp;Enrollment Slots for This Term Are Filling Up — Only
+  <span class="tc">
+    <span class="tb" id="uh">09</span>&nbsp;Hrs&nbsp;
+    <span class="tb" id="um">44</span>&nbsp;Min&nbsp;
+    <span class="tb" id="us">00</span>&nbsp;Sec
+  </span>
+  &nbsp;Left to Lock In Your Spot!
+</div>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="hdr">
+  <div class="hdr-brand">
+    <div class="hdr-icon">📚</div>
+    <div>
+      <div class="brand-name">Better <span>Together</span> Homeschool International</div>
+      <div class="brand-sub">Championing Home Education · Est. 2020</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <div class="hdr-badge">🇵🇭 DepEd Recognized</div>
+    <div class="hdr-badge">🇺🇸 US Accredited</div>
+    <div class="hdr-badge">✨ New: Guided Homeschooling</div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🆕 Introducing — BTHI Weekly Guided Homeschooling</div>
+
+    <h1>The <em>1-Hour-a-Week</em> Guided Homeschooling<br>That Changes Everything</h1>
+    <div class="hero-sub">How homeschool students finally fill the gaps, find their confidence, and fall in love with learning — guided by experts who know exactly what to teach, how to teach it, and how your child learns best</div>
+
+    <p class="hero-proof">
+      <strong>The exact support system that helped 200+ BTHI students</strong> go from confused and frustrated to confident and thriving — using our BTHI-directed weekly guided homeschooling sessions where every guide is trained and told exactly what to teach and how to teach it, based on your child's unique needs and learning style…<br>
+      <strong>no rigid schedules, no overwhelming homework, no generic one-size-fits-all approach.</strong>
+    </p>
+
+    <!-- 1 Hour · 1 Session · 1 Week callout -->
+    <div class="hour-callout">
+      <div class="hc-item">
+        <div class="hc-num">1</div>
+        <div class="hc-label">Hour Per Session</div>
+      </div>
+      <div class="hc-sep">·</div>
+      <div class="hc-item">
+        <div class="hc-num">1</div>
+        <div class="hc-label">Session Per Week</div>
+      </div>
+      <div class="hc-sep">·</div>
+      <div class="hc-item">
+        <div class="hc-num">100%</div>
+        <div class="hc-label">Online &amp; Flexible</div>
+      </div>
+      <div class="hc-sep">·</div>
+      <div class="hc-item">
+        <div class="hc-num">K–12</div>
+        <div class="hc-label">All Grade Levels</div>
+      </div>
+    </div>
+
+    <div class="hero-pills">
+      <div class="hpill">✅ DepEd-Aligned Curriculum</div>
+      <div class="hpill">📲 Live Online Sessions via Zoom</div>
+      <div class="hpill">👨‍🏫 BTHI-Directed Certified Guides</div>
+      <div class="hpill">💬 Parent Progress Reports Included</div>
+    </div>
+
+    <div class="btn-pair" style="animation:riseUp .65s .45s ease both;">
+      <a href="#enroll" class="btn">
+        Enroll Now — Secure Your Slot<br>
+        <small style="font-weight:500;font-size:.82em;">Start in the next 2 minutes</small>
+      </a>
+      <a href="#what-we-do" class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4);">Learn More</a>
+    </div>
+    <span class="btn-note">Limited slots per guide · Sessions fill fast each term</span>
+  </div>
+  <div class="hero-wave"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WIN MARQUEE
+══════════════════════════════════════════ -->
+<div class="mq-wrap">
+  <div class="mq-track" id="mq">
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Lian, Grade 5</strong> — Went from failing Math to 89% in one term</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Sofia, Grade 8</strong> — Conquered Reading Comprehension in 6 sessions</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Marcus, Grade 3</strong> — Now excited for his weekly guided session every Saturday</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Mia, Grade 10</strong> — Science grades up 2 letter grades in one semester</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Joaquin, Grade 6</strong> — Dyslexia support · Now reads full books independently</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Ella, Grade 9</strong> — US Curriculum Math · Ready for SAT Prep at 14</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Paolo, Grade 7</strong> — From hating school to asking for extra sessions</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Zoe, Kinder</strong> — First to read in her learning group · Just 1 hr/week</div></div>
+    <!-- duplicate -->
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Lian, Grade 5</strong> — Went from failing Math to 89% in one term</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Sofia, Grade 8</strong> — Conquered Reading Comprehension in 6 sessions</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Marcus, Grade 3</strong> — Now excited for his weekly guided session every Saturday</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Mia, Grade 10</strong> — Science grades up 2 letter grades in one semester</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Joaquin, Grade 6</strong> — Dyslexia support · Now reads full books independently</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Ella, Grade 9</strong> — US Curriculum Math · Ready for SAT Prep at 14</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Paolo, Grade 7</strong> — From hating school to asking for extra sessions</div></div>
+    <div class="mq-item"><div class="mq-emoji">⭐</div><div class="mq-text"><strong>Zoe, Kinder</strong> — First to read in her learning group · Just 1 hr/week</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     BONUS TIMER
+══════════════════════════════════════════ -->
+<div class="bonus-timer">
+  <h3>⏰ Time Left Before This Term's Guided Homeschooling Slots Fill Up for Good</h3>
+  <div class="big-timer">
+    <div class="bt-u"><div class="bt-n" id="bh">09</div><div class="bt-l">Hours</div></div>
+    <div class="bt-u"><div class="bt-n" id="bm">44</div><div class="bt-l">Minutes</div></div>
+    <div class="bt-u"><div class="bt-n" id="bs">00</div><div class="bt-l">Seconds</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAIN SECTION
+══════════════════════════════════════════ -->
+<section class="sec sec-forest" id="what-we-do" style="text-align:center;">
+  <div class="wrapN">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Why Most Homeschool Students Are Still Struggling Without Guided Direction</span>
+    </div>
+    <h2 class="htitle" style="color:#fff;">Let me guess what your child's learning day looks like right now:</h2>
+    <div class="body-rule" style="margin:0 auto 28px;background:var(--sun2);"></div>
+
+    <ul class="pain-list">
+      <li>You explain the lesson — they nod — then get stuck the moment they try it alone</li>
+      <li>You switch curriculum after curriculum hoping this one will finally click</li>
+      <li>Your child is frustrated, you're frustrated, and learning time turns into battle time</li>
+      <li>You know there are gaps from earlier grades — but you don't know exactly what they are</li>
+      <li>You've tried YouTube videos, apps, and workbooks — temporary help, no real progress</li>
+      <li>You worry that without structured support, your child will fall behind their peers</li>
+    </ul>
+
+    <p style="color:rgba(255,255,255,.45);font-size:.9rem;margin-bottom:22px;font-style:italic;">Sound familiar?</p>
+
+    <div class="insight-box">
+      <p><strong style="color:#fff;">Here's the honest truth:</strong></p>
+      <p>Homeschooling gives your child freedom and flexibility — but freedom without targeted support can quietly build invisible gaps. A child who "sort of understands" a concept today will struggle with everything built on top of it tomorrow.</p>
+      <div class="big">"One focused hour per week — where the guide already knows what to teach and how to teach it for your child — fills more gaps than five unfocused hours with the wrong method."</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 1 -->
+<div class="cta-row dark">
+  <a href="#enroll" class="btn">Enroll Now — Secure Your Slot</a>
+  <span class="btn-note">Limited slots per guide · Sessions fill fast each term</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     COMPARE
+══════════════════════════════════════════ -->
+<section class="sec sec-warm">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">The Difference</span>
+    </div>
+    <h2 class="htitle">Students who struggle vs. students who <em>thrive</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="cmp-grid">
+      <div class="cp bad">
+        <h4>😰 Without BTHI Guided Homeschooling</h4>
+        <div class="ci"><span class="ic">❌</span><span>Gaps from earlier grades quietly compound — making future subjects harder</span></div>
+        <div class="ci"><span class="ic">❌</span><span>Parent spends hours re-teaching the same concept with decreasing patience</span></div>
+        <div class="ci"><span class="ic">❌</span><span>Child associates learning with frustration, reluctance, and low confidence</span></div>
+        <div class="ci"><span class="ic">❌</span><span>No direction for the guide — lessons are improvised with no plan built around how your child actually learns</span></div>
+      </div>
+      <div class="cp good">
+        <h4>🌟 With BTHI Weekly Guided Homeschooling</h4>
+        <div class="ci"><span class="ic">✅</span><span>Specific gaps are identified and filled — one subject, one concept, one win at a time</span></div>
+        <div class="ci"><span class="ic">✅</span><span>Parent is relieved — the expert handles the hard part, you handle the relationship</span></div>
+        <div class="ci"><span class="ic">✅</span><span>Child associates learning with progress, breakthrough moments, and growing confidence</span></div>
+        <div class="ci"><span class="ic">✅</span><span>One-hour, BTHI-directed session where the guide arrives with a personalised plan — knowing exactly what to teach and how to teach it for your child</span></div>
+      </div>
+    </div>
+
+    <div class="cmp-verdict">
+      What's the difference?<br>Not intelligence. Not curriculum. Not hours of study.<br>
+      <strong>One focused, BTHI-directed hour per week — built around exactly how your child learns.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2 -->
+<div class="cta-row warm">
+  <a href="#enroll" class="btn">Enroll Now — Secure Your Slot</a>
+  <span class="btn-note lt">Limited slots per guide · Sessions fill fast each term</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════════ -->
+<section class="sec sec-sun-pale">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">How It Works</span>
+    </div>
+    <h2 class="htitle">One hour a week. Simple, structured, <em>and it actually works.</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="sys-row">
+      <div class="sys-step">
+        <div class="snum">1</div>
+        <h4>Enroll &amp; Choose Your Subject</h4>
+        <p>Pick the subject your child needs most. We'll match them with a BTHI-certified guide — then build a personalised teaching plan around your child's grade level and unique learning style.</p>
+        <div class="sarrow">→</div>
+      </div>
+      <div class="sys-step">
+        <div class="snum">2</div>
+        <h4>Initial Learning Assessment</h4>
+        <p>Your guide runs a quick, friendly assessment in Session 1 to pinpoint exactly where the gaps are. BTHI uses this to build the guide's teaching plan — no stress, just discovery.</p>
+        <div class="sarrow">→</div>
+      </div>
+      <div class="sys-step">
+        <div class="snum">3</div>
+        <h4>Weekly 1-Hour Live Session</h4>
+        <p>Every week, one focused hour via Zoom. Your guide arrives with a BTHI-prepared lesson plan — telling them exactly what to teach and how to teach it — adapted to how your child learns best.</p>
+        <div class="sarrow">→</div>
+      </div>
+      <div class="sys-step">
+        <div class="snum">4</div>
+        <h4>Post-Session Summary to Parent</h4>
+        <p>After every session, you receive a short progress note — what was covered, what clicked, and how BTHI will adjust the next session's teaching approach based on what your child showed.</p>
+        <div class="sarrow">→</div>
+      </div>
+      <div class="sys-step">
+        <div class="snum">5</div>
+        <h4>Monthly Progress Review</h4>
+        <p>Every month, BTHI reviews your child's progress and updates the guide's teaching plan — ensuring the approach, pace, and methods evolve as your child grows.</p>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:28px;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--forest);">Simple enough for a busy family. Powerful enough to transform how your child learns — because every session is built around them, not a generic script.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SUBJECTS
+══════════════════════════════════════════ -->
+<section class="sec sec-warm">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Subjects Available</span>
+    </div>
+    <h2 class="htitle">One hour a week in the subject that matters <em>most right now</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="subject-grid">
+      <div class="subject-card">
+        <div class="sico">🔢</div>
+        <h4>Mathematics</h4>
+        <p>From counting and fractions to algebra, geometry, and calculus — we meet your child exactly where they are.</p>
+        <div class="slevel">Kinder – Grade 12</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">📖</div>
+        <h4>Reading &amp; Comprehension</h4>
+        <p>Decoding, fluency, vocabulary, and deep reading skills — building confident, enthusiastic readers one session at a time.</p>
+        <div class="slevel">Kinder – Grade 10</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">✍️</div>
+        <h4>Writing &amp; Composition</h4>
+        <p>Sentence structure, paragraph development, essay writing, and creative expression — finding their unique voice on paper.</p>
+        <div class="slevel">Grade 2 – Grade 12</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">🔬</div>
+        <h4>Science</h4>
+        <p>Biology, Chemistry, Physics, and Earth Science — making the abstract tangible through guided discovery and real examples.</p>
+        <div class="slevel">Grade 4 – Grade 12</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">🌏</div>
+        <h4>Filipino &amp; Araling Panlipunan</h4>
+        <p>DepEd-aligned Filipino language, literature, and Araling Panlipunan — supporting your child's cultural and civic foundations.</p>
+        <div class="slevel">Kinder – Grade 10</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">🗣️</div>
+        <h4>English Language Arts</h4>
+        <p>Grammar, spoken English, literature analysis, and communication skills — preparing your child for academic and professional excellence.</p>
+        <div class="slevel">Kinder – Grade 12</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">🌐</div>
+        <h4>US Curriculum Subjects</h4>
+        <p>Aligned with US curriculum standards for BTHI's US Enrollment and Dual Accreditation students — same expert quality, US context.</p>
+        <div class="slevel">K – Grade 12 (US Track)</div>
+      </div>
+      <div class="subject-card">
+        <div class="sico">🎨</div>
+        <h4>Gentle Learning Support</h4>
+        <p>Specialized sessions for students with ADHD, dyslexia, or unique learning needs — patient, trauma-informed, and genuinely effective.</p>
+        <div class="slevel">All Ages · GLP-Aligned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 3 -->
+<div class="cta-row warm">
+  <a href="#enroll" class="btn">Enroll Now — Secure Your Slot</a>
+  <span class="btn-note lt">Limited slots per guide · Sessions fill fast each term</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     WHO FOR
+══════════════════════════════════════════ -->
+<section class="sec sec-linen">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Who This Is For… and Isn't</span>
+    </div>
+    <h2 class="htitle">This works for your child if…</h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="who-grid">
+      <div class="wcard">
+        <div class="wico">😓</div>
+        <h4>The Struggling Learner</h4>
+        <ul>
+          <li>Stuck on the same concepts week after week despite parent's best efforts</li>
+          <li>Losing confidence and beginning to believe "I'm just not good at this"</li>
+          <li>Has invisible gaps from earlier grades that are now blocking progress</li>
+          <li>Needs one consistent adult outside the family to believe in and guide them</li>
+        </ul>
+      </div>
+      <div class="wcard">
+        <div class="wico">🌱</div>
+        <h4>The New Homeschooler</h4>
+        <ul>
+          <li>Recently pulled from traditional school and adjusting to home learning</li>
+          <li>Parent is still figuring out how to teach while raising the child simultaneously</li>
+          <li>Needs structured support while the family builds its homeschool rhythm</li>
+          <li>Benefits from a consistent weekly anchor point in an otherwise flexible week</li>
+        </ul>
+      </div>
+      <div class="wcard">
+        <div class="wico">🚀</div>
+        <h4>The Gifted &amp; Advanced Learner</h4>
+        <ul>
+          <li>Has raced ahead of their grade level and needs richer, deeper material</li>
+          <li>Gets bored easily and disengages when work isn't challenging enough</li>
+          <li>Ready for enrichment, critical thinking projects, and real intellectual challenge</li>
+          <li>Needs a guide who is told to push further — and given the tools to do it in the way this child learns best</li>
+        </ul>
+      </div>
+      <div class="wcard">
+        <div class="wico">💛</div>
+        <h4>The Unique Learner</h4>
+        <ul>
+          <li>Has ADHD, dyslexia, autism, or other learning differences that need special approach</li>
+          <li>Traditional methods haven't worked — and one-size-fits-all curriculum doesn't fit</li>
+          <li>Needs a guide who receives a BTHI-prepared approach built specifically for their learning difference — not a generic method applied by someone figuring it out on the fly</li>
+          <li>Is capable of more than anyone has yet helped them achieve</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="notfor">
+      <h4>⚠️ This is NOT for your child if:</h4>
+      <ul>
+        <li>You expect significant results without the child attending sessions consistently</li>
+        <li>You want a guide to do the child's homework for them rather than teach genuine understanding</li>
+        <li>Your child needs 5–7 hours of daily instruction — this is supplemental, not a full school replacement</li>
+        <li>You are not willing to lightly reinforce learning in the days between sessions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MISTAKES
+══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--white);">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Where Homeschool Parents Go Wrong Without a Guided System</span>
+    </div>
+    <h2 class="htitle">…And How <em>BTHI Weekly Guided Homeschooling</em> Fixes This</h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="mblock">
+      <div class="mhead">Mistake #1 — More Hours, Not Better Hours</div>
+      <div class="mbody">
+        <div class="mbad">
+          <div class="mlbl">❌ What Most Parents Do</div>
+          <p>Extend study time to 5, 6, or even 7 hours a day — believing that more time on the material will eventually make it click. The child sits at the desk longer, accomplishes less, and the resistance grows stronger every day.</p>
+          <div class="mresult">😞 What they get: An exhausted child, a burned-out parent, and no real learning progress.</div>
+        </div>
+        <div class="mgood">
+          <div class="mlbl">✅ What BTHI Guided Homeschooling Does</div>
+          <p>One focused, BTHI-directed hour per week — where the guide already knows your child's gap and arrives with a plan to address it. Research consistently shows that focused, purposeful learning outperforms extended, unfocused study by a significant margin. Less time. Better outcome.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mblock">
+      <div class="mhead">Mistake #2 — Using Generic Centers Where No One Tells the Teacher What or How to Teach</div>
+      <div class="mbody">
+        <div class="mbad">
+          <div class="mlbl">❌ What Most Parents Do</div>
+          <p>Enroll in a mass-market center where the teacher improvises, follows a generic script, or simply reviews the child's homework. Nobody has assessed how the child learns, built a personalised plan, or told the teacher what method will actually work for this specific child.</p>
+          <div class="mresult">😞 What they get: Sessions that feel disconnected, generic, and don't move the child forward — because no one designed the approach around how they actually learn.</div>
+        </div>
+        <div class="mgood">
+          <div class="mlbl">✅ What BTHI Guided Homeschooling Does</div>
+          <p>BTHI tells every guide exactly what to teach and how to teach it — before they ever enter a session. Each guide receives a personalised teaching plan built around the child's assessed learning style, grade level, and specific gaps. The method is designed for that child, not borrowed from a generic curriculum. Same philosophy as your homeschool. Same direction. No guesswork.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mblock">
+      <div class="mhead">Mistake #3 — Waiting Until the Problem Is a Crisis</div>
+      <div class="mbody">
+        <div class="mbad">
+          <div class="mlbl">❌ What Most Parents Do</div>
+          <p>Notice the struggle early but wait — "maybe they'll figure it out," "maybe next term will be better" — until the gap is so large that catching up requires significantly more time, cost, and emotional energy for both parent and child.</p>
+          <div class="mresult">😞 What they get: A problem that was fixable in 6 sessions now requires a full semester to repair.</div>
+        </div>
+        <div class="mgood">
+          <div class="mlbl">✅ What BTHI Guided Homeschooling Does</div>
+          <p>The earlier a gap is addressed, the faster and less painful the fix. BTHI Guided Homeschooling is designed to catch problems early — in the first signs of confusion — before they compound into a full-blown academic crisis. And because every session already has a plan, there's no warm-up time wasted. One focused hour a week, started now, can prevent six months of struggle later.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:26px;font-size:.93rem;color:var(--body);">
+      <strong>The pattern is always the same.</strong><br>
+      The families who act early — with the right support — have the easiest journeys.<br>
+      <strong style="color:var(--forest);">One BTHI-directed hour a week — built for your child. That's all it takes. Start now.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- CTA 4 -->
+<div class="cta-row sun">
+  <a href="#enroll" class="btn">Enroll Now — Secure Your Slot</a>
+  <span class="btn-note lt">Limited slots per guide · Sessions fill fast each term</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     EXPANDED WHO PERFECT FOR
+══════════════════════════════════════════ -->
+<section class="sec sec-forest-pale">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Who Is BTHI Weekly Guided Homeschooling Perfect For?</span>
+    </div>
+    <h2 class="htitle">If you're happy with unguided struggle continuing, <em>this isn't for you.</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+    <p style="color:var(--body);max-width:600px;margin:0 auto 36px;font-size:.93rem;">But if you want a consistent, expert, affordable weekly guided homeschooling session — where BTHI tells the guide exactly what to teach and how to teach it for your child — this was built for your family.</p>
+
+    <div class="who-grid">
+      <div class="wcard">
+        <div class="wico">📚</div>
+        <h4>BTHI-Enrolled Students</h4>
+        <ul>
+          <li>Already enrolled in BTHI's Local, US, Dual, or GLP program</li>
+          <li>Wants guided homeschooling sessions that are already aligned with their BTHI curriculum and portfolio</li>
+          <li>Guide is given a teaching plan built directly from BTHI's portfolio system and learning framework</li>
+          <li>Sessions count toward BTHI academic support requirements where applicable — seamlessly integrated</li>
+        </ul>
+      </div>
+
+      <div class="wcard">
+        <div class="wico">🌍</div>
+        <h4>OFW &amp; Overseas Families</h4>
+        <ul>
+          <li>Child is being guided by a parent or grandparent at home in the Philippines</li>
+          <li>OFW parent gets weekly eyes and ears on the learning — with a guide who follows a BTHI-designed plan, not improvising</li>
+          <li>Sessions are fully online — no travel, no logistics, no geographic limits</li>
+          <li>Progress reports give the overseas parent peace of mind every week</li>
+        </ul>
+      </div>
+      <div class="wcard">
+        <div class="wico">👩‍💼</div>
+        <h4>Working &amp; Busy Parents</h4>
+        <ul>
+          <li>Homeschooling while managing a job, business, or other children</li>
+          <li>Can't dedicate hours to one-on-one teaching every single day</li>
+          <li>Needs a trusted, consistent guide who arrives with a BTHI-prepared plan for the hardest subject every week</li>
+          <li>One BTHI-directed guided hour frees up hours of parental teaching time — and the parent can trust it's being done right</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT YOU GET
+══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--white);">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Exactly What's Included</span>
+    </div>
+    <h2 class="htitle">Everything your child gets with <em>BTHI Weekly Guided Homeschooling</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="inc-grid">
+      <div class="icard">
+        <div class="iico">🎬</div>
+        <div>
+          <h5>4 Live 1-Hour Guided Homeschooling Sessions/Month</h5>
+          <p>One focused, BTHI-directed hour every week — live on Zoom. Every session follows a teaching plan built by BTHI for your child's grade level, learning style, and current gaps. Your guide knows exactly what to teach and how before they arrive.</p>
+          <div class="ival">Core Service · 4 Sessions Monthly</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">🧠</div>
+        <div>
+          <h5>Initial Learning Gap Assessment</h5>
+          <p>Session 1 includes a friendly, stress-free diagnostic to pinpoint exactly where your child needs the most support — so every future session is precisely targeted.</p>
+          <div class="ival">FREE with Enrollment</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">👨‍🏫</div>
+        <div>
+          <h5>BTHI-Directed Certified Learning Guide</h5>
+          <p>A dedicated, certified guide trained by BTHII — and crucially, told by BTHII exactly what to teach and how to teach it for your specific child. Every session has a purpose-built plan. Nothing is improvised. The guide's method is designed around how your child learns, not a generic approach applied to everyone.</p>
+          <div class="ival">Included · Same Dedicated Guide Every Week</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">📝</div>
+        <div>
+          <h5>Post-Session Progress Summary</h5>
+          <p>After every session, you receive a clear summary of what was covered, what your child mastered, and how BTHI will shape the next session's teaching approach based on what your child showed today.</p>
+          <div class="ival">FREE · Sent After Every Session</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">📊</div>
+        <div>
+          <h5>Monthly Academic Progress Report</h5>
+          <p>A fuller monthly report tracking growth, identifying continued gaps, and adjusting the session plan — so you always know exactly where your child stands and where they're heading.</p>
+          <div class="ival">FREE · Monthly</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">📅</div>
+        <div>
+          <h5>Flexible Scheduling — You Choose the Day</h5>
+          <p>Schedule your weekly session on the day and time that fits your family's rhythm — weekday mornings, afternoons, or weekends. Reschedule with 24 hours' notice at no charge.</p>
+          <div class="ival">Included · Your Schedule</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">📚</div>
+        <div>
+          <h5>Session Materials &amp; Activity Sheets</h5>
+          <p>BTHI prepares all session materials for the guide — lesson plans, activity sheets, practice exercises, and visual aids tailored to your child's learning style. The guide arrives fully equipped. Your child arrives ready to learn.</p>
+          <div class="ival">FREE · Prepared by BTHII for Every Child</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">💬</div>
+        <div>
+          <h5>Parent-Guide Communication Channel</h5>
+          <p>Direct messaging access to your child's guide between sessions — for quick questions, updates about your child's week, or flags that BTHI should adjust the next session's teaching plan.</p>
+          <div class="ival">FREE · Via BTHI Parent Portal · BTH adjusts the plan accordingly</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">🎯</div>
+        <div>
+          <h5>Curriculum Alignment Check</h5>
+          <p>Each month, BTHI reviews the guide's session reports and realigns the teaching plan to your child's evolving homeschool curriculum — so guided sessions always reinforce home learning, never contradict it.</p>
+          <div class="ival">FREE · BTHI Reviews &amp; Realigns Monthly</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">🏅</div>
+        <div>
+          <h5>Term-End Achievement Recognition</h5>
+          <p>At the end of each term, your child receives a BTHI Guided Homeschooling achievement certificate recognizing their growth and effort — fully recognised by BTHII and a meaningful addition to their homeschool portfolio.</p>
+          <div class="ival">FREE · Every Term · Portfolio-Ready</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">🎁</div>
+        <div>
+          <h5>BONUS: Learning Style Profile</h5>
+          <p>A written profile of your child's unique learning style — visual, auditory, kinesthetic, or mixed. This profile goes directly to BTHI, who uses it to shape the guide's teaching plan. Every session is literally designed around how your child learns — not how most children learn.</p>
+          <div class="ival">FREE (Value: ₱999)</div>
+        </div>
+      </div>
+      <div class="icard">
+        <div class="iico">🤖</div>
+        <div>
+          <h5>BONUS: AI-Powered Practice Activity Pack</h5>
+          <p>A set of between-session practice activities generated for your child's current level and learning style — so the guided approach continues between sessions, without requiring hours of parental preparation.</p>
+          <div class="ival">FREE (Value: ₱499/month)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Value table -->
+    <div class="val-tbl">
+      <h4>Monthly Value Breakdown</h4>
+      <div class="vr"><span class="vi">4 × 1-Hour BTHI-Guided Sessions</span><span class="vp">Core</span></div>
+      <div class="vr"><span class="vi">Initial Gap Assessment</span><span class="vp">FREE</span></div>
+      <div class="vr"><span class="vi">4 × Post-Session Progress Summaries</span><span class="vp">FREE</span></div>
+      <div class="vr"><span class="vi">Monthly Academic Progress Report</span><span class="vp">FREE</span></div>
+      <div class="vr"><span class="vi">All Session Materials &amp; Activity Sheets</span><span class="vp">FREE</span></div>
+      <div class="vr"><span class="vi">Parent-Guide Communication Access</span><span class="vp">FREE</span></div>
+      <div class="vr"><span class="vi">Bonus: Learning Style Profile</span><span class="vp">FREE (₱999)</span></div>
+      <div class="vr"><span class="vi">Bonus: AI Practice Activity Pack</span><span class="vp">FREE (₱499)</span></div>
+      <div class="inv-hl" style="margin-top:20px;">
+        <div class="bigp">One enrollment. <em>One hour a week.</em></div>
+        <p>That's all it takes to change how your child experiences learning — for good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 5 -->
+<div class="cta-row warm">
+  <a href="#enroll" class="btn">Enroll Now — Secure Your Slot</a>
+  <span class="btn-note lt">Limited slots per guide · Sessions fill fast each term</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     GUARANTEE
+══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--white);padding-top:40px;padding-bottom:40px;">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="gico">🛡️</div>
+      <div>
+        <h4>The Better Together Homeschool International Promise</h4>
+        <p>We are so confident in the BTHI-directed approach that we offer this commitment: complete your child's first full month of four guided sessions, and if you don't see measurable improvement in your child's engagement, understanding, or confidence — we will revise the teaching plan, pair your child with a different guide, extend sessions by one month at no charge, or refund your first month's payment in full. No arguments. No process. Your child's growth is the only outcome we care about.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MEET THE TEAM
+══════════════════════════════════════════ -->
+<section class="sec sec-forest-pale">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Meet Your Guided Homeschooling Team</span>
+    </div>
+    <h2 class="htitle">The <em>Better Together Homeschool International</em> people behind your child's breakthrough</h2>
+    <div class="body-rule" style="margin:0 auto 36px;"></div>
+
+    <div class="bio-wrap">
+      <div class="bio-av">
+        <div class="av-ico">📚</div>
+        <div class="av-name">Better Together<br>Homeschool International</div>
+      </div>
+      <div style="text-align:left;">
+        <div class="bio-name">Better Together Homeschool International</div>
+        <div class="bio-title">DepEd-Recognized · US-Accredited · Est. 2020 · Philippines &amp; Worldwide</div>
+        <p class="bio-body">Better Together Homeschool International has been championing home education since 2020 — helping over 1,000 Filipino families across the Philippines and in 20+ countries around the world enroll their children in a legal, accredited, and genuinely effective homeschool program. Our DepEd-recognized and US-accredited programs have served families from all walks of life, from OFW households to children with special needs to gifted learners who needed more than any traditional school could offer.</p>
+        <p class="bio-body">BTHI Weekly Guided Homeschooling is a natural extension of that mission. It exists because we listened to our families — who told us that what their children needed was not just a warm body sitting across a screen, but an expert guide who arrives with a plan. A plan built by BTH. A plan that accounts for how their child specifically learns — not a generic script handed to a freelance tutor.</p>
+        <p class="bio-body">Every BTH guide is certified, trained in homeschool pedagogy, and matched to each student. But what makes BTHI Guided Homeschooling different is this: <strong>BTH tells every guide exactly what to teach and how to teach it</strong> — based on a learning style profile built for that specific child. Our guides don't improvise. They execute a carefully designed plan. Because we believe that great outcomes come from great systems — not guesswork.</p>
+        <div class="bio-badges">
+          <span class="bbadge">🏅 DepEd-Recognized Provider</span>
+          <span class="bbadge">🇺🇸 US-Accredited</span>
+          <span class="bbadge">👨‍👩‍👧 1,000+ Families Served</span>
+          <span class="bbadge">🌍 20+ Countries</span>
+          <span class="bbadge">📚 K–12 All Programs</span>
+          <span class="bbadge">✨ New: Guided Homeschooling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section class="sec sec-forest">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule" style="background:var(--sun);"></div>
+      <span class="sec-label-text" style="color:var(--sun3);">What Families Are Saying</span>
+    </div>
+    <h2 class="htitle" style="color:#fff;">Real BTH families. Real results. <em>Real one hour a week.</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;background:var(--sun);"></div>
+
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="qt">"My son Lian was failing Math. We tried everything — workbooks, apps, extra study time. Nothing worked. After just 6 BTH-guided sessions, he went from 65% to 89% in his assessment. BTHI had already mapped the gap and given the guide a plan to fix it. It was fixed in weeks. I wish we had started sooner."</p>
+        <div class="tauthor"><div class="tav">MA</div><div><div class="tname">Maria A.</div><div class="trole">Mom of Lian, Grade 5 · BTH Local Enrollment</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="qt">"We're an OFW family — my husband is in Dubai and I guide our daughter at home. Adding BTHI Guided Homeschooling was the best decision we made this school year. I get a progress report every week so my husband knows exactly how Sofia is doing. She now looks forward to her Saturday session every week. That alone says everything."</p>
+        <div class="tauthor"><div class="tav">RC</div><div><div class="tname">Rosario C.</div><div class="trole">OFW Homeschool Parent · BTH Student Sofia, Grade 8</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="qt">"Joaquin has dyslexia. Traditional school was a disaster and even most tutors didn't know how to help. BTHI built a specific teaching plan for Joaquin's dyslexia and trained the guide on exactly how to implement it. Within three months, my son went from refusing to read to finishing his first full chapter book. I cried. He was so proud of himself."</p>
+        <div class="tauthor"><div class="tav">JL</div><div><div class="tname">Joy L.</div><div class="trole">Mom of Joaquin, Grade 6 · BTH Gentle Learning Program</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="qt">"I was skeptical. One hour a week didn't sound like enough. What convinced me was this: the guide told me BTH had already identified the likely block from the learning assessment — and built session 2's plan specifically around it. It clicked that session. Everything else opened up from there. That's not luck. That's a system."</p>
+        <div class="tauthor"><div class="tav">DM</div><div><div class="tname">David M.</div><div class="trole">Dad of Ella, Grade 9 · BTH US Enrollment Track</div></div></div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="qt">"I'm a working mom who homeschools after hours. BTHI Guided Homeschooling takes Science — the subject I'm weakest at teaching — completely off my plate. Mia's guide arrives every week with a BTHI-prepared plan for exactly what to cover and how. I get the progress summary. The portfolio stays on track. Hindi ko ito kaya nang wala itong serbisyo."</p>
+        <div class="tauthor"><div class="tav">SB</div><div><div class="tname">Sheila B.</div><div class="trole">Working Homeschool Mom · Mia, Grade 10</div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ROI COMPARE
+══════════════════════════════════════════ -->
+<section class="sec sec-warm">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Ways Families Try to Solve the Learning Gap</span>
+    </div>
+    <h2 class="htitle">…And what each one <em>actually delivers</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="roi-grid">
+      <div class="rcard">
+        <div class="re">📱</div>
+        <h4>Educational Apps &amp; YouTube</h4>
+        <p>Free and convenient. But passive. No one notices when your child is confused or quietly guessing.</p>
+        <div class="pot">Result: Temporary distraction, not real understanding</div>
+      </div>
+      <div class="rcard">
+        <div class="re">📦</div>
+        <h4>Another Curriculum Box Set</h4>
+        <p>₱3,000–₱20,000. A new set of materials your child may resist just as much as the last one.</p>
+        <div class="pot">Result: Better materials, same unsolved gap</div>
+      </div>
+      <div class="rcard">
+        <div class="re">🏢</div>
+        <h4>Generic Tutoring Center</h4>
+        <p>The teacher improvises. No plan for your child. No method built around how they learn. No awareness of their homeschool curriculum.</p>
+        <div class="pot">Result: Generic sessions. No real progress.</div>
+      </div>
+      <div class="rcard hi">
+        <div class="re">📚</div>
+        <h4>BTHI Guided Homeschooling</h4>
+        <p>1 hour. BTHI-directed. Teaching plan built for your child. Guide told exactly what to teach and how. DepEd-aligned. Affordable.</p>
+        <div class="pot">Result: Real gaps filled. Real confidence built.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:26px;font-size:.92rem;color:var(--body);">
+      Your child's learning gap doesn't get smaller by waiting.<br>
+      <strong style="color:var(--forest);">One BTHI-directed guided hour a week, started now, changes what next term looks like.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRICING / ENROLL
+══════════════════════════════════════════ -->
+<section id="enroll" class="sec sec-linen">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Enroll Today</span>
+    </div>
+    <h2 class="htitle">One hour a week. <em>Starting this term.</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="price-box">
+      <div class="price-ribbon">🎉 Most Popular · This Term's Best Value</div>
+
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;">
+        <!-- Monthly plan -->
+        <div style="text-align:center;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">Monthly Plan</div>
+          <div class="price-was">₱1,999/month</div>
+          <div class="price-now"><sup>₱</sup>1,499</div>
+          <div class="price-freq">/month · 4 sessions</div>
+        </div>
+        <div style="width:1px;background:var(--border);margin:8px 0;"></div>
+        <!-- Term plan -->
+        <div style="text-align:center;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--forest);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">🏆 Term Plan (Best Value)</div>
+          <div class="price-was">₱5,997 if paid monthly</div>
+          <div class="price-now"><sup>₱</sup>3,999</div>
+          <div class="price-freq">/term · 3 months · 12 sessions</div>
+        </div>
+      </div>
+
+      <div class="price-sub">Per subject · Per student · 1 hour per session · Fully online</div>
+
+      <div style="background:var(--forest-pale);border-radius:10px;padding:20px;margin-bottom:26px;text-align:left;">
+        <div class="vr"><span class="vi">4 × 1-Hour BTHI-Directed Guided Sessions</span><span class="vp">✓ Included</span></div>
+        <div class="vr"><span class="vi">Initial Learning Gap Assessment</span><span class="vp">FREE</span></div>
+        <div class="vr"><span class="vi">Post-Session Progress Summary (every session)</span><span class="vp">FREE</span></div>
+        <div class="vr"><span class="vi">Monthly Progress Report</span><span class="vp">FREE</span></div>
+        <div class="vr"><span class="vi">All Session Materials &amp; Activity Sheets</span><span class="vp">FREE</span></div>
+        <div class="vr"><span class="vi">Bonus: Learning Style Profile + AI Practice Pack</span><span class="vp">FREE</span></div>
+      </div>
+
+      <a href="https://www.bettertogetherhomeschool.com/contact-us" class="btn" style="display:block;max-width:420px;margin:0 auto 14px;text-align:center;">
+        Enroll Now — Secure Your Slot<br>
+        <small style="font-weight:500;font-size:.82em;">Start the enrollment in the next 2 minutes</small>
+      </a>
+      <p style="font-size:.74rem;color:var(--body);margin-bottom:4px;">🔒 Secure enrollment · Limited slots per guide · For BTHI-enrolled students</p>
+      <p style="font-size:.74rem;color:var(--peach);font-weight:700;">⚠️ Slots fill fast each term — early enrollment secures your preferred schedule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section class="sec" style="background:var(--white);">
+  <div class="wrap" style="text-align:center;">
+    <div class="sec-label" style="justify-content:center;">
+      <div class="sec-rule"></div>
+      <span class="sec-label-text">Frequently Asked Questions</span>
+    </div>
+    <h2 class="htitle">Everything you need to know <em>before enrolling</em></h2>
+    <div class="body-rule" style="margin:0 auto 28px;"></div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is one hour per week really enough to make a difference?</div>
+        <div class="faq-a">Yes — and here's why. Most learning struggles are caused by one or two specific unresolved gaps, not a general inability to learn. A BTHI-directed guide who arrives with a teaching plan built around exactly those gaps — and knows how to teach to your child's learning style — achieves far more than hours of unfocused study. Many of our families see measurable improvement within 4–6 sessions. The key is precision, not volume.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do we choose which subject to focus on?</div>
+        <div class="faq-a">During enrollment, you'll indicate the subject area your child needs the most support with. If you're unsure, our team can help you assess based on your child's grade level, curriculum, and the learning challenges you're observing. You can also choose to switch subjects each term if priorities change.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What day and time can we schedule the weekly session?</div>
+        <div class="faq-a">Sessions are available Monday through Sunday, with morning, afternoon, and evening slots to fit different family schedules. You choose your preferred slot during enrollment, and that slot is reserved for your child each week for the duration of the term. You can reschedule with 24 hours' notice at no charge, up to twice per month.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What platform do sessions happen on?</div>
+        <div class="faq-a">All BTHI Guided Homeschooling sessions are held via Zoom. You will need a computer, tablet, or smartphone with a camera and stable internet connection. Your child's guide will share BTHI-prepared materials digitally before and after each session. No special software or equipment is needed beyond a Zoom account, which is free to create.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will my child have the same guide every week?</div>
+        <div class="faq-a">Yes. Consistency is central to our approach. Your child will be assigned to one dedicated BTHI-certified guide for the duration of the term. Building a trusting relationship with one consistent guide — who follows a BTHI-designed plan tailored to your child — is central to why the sessions are effective, especially for children who struggle with transitions or new people.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if the guide isn't a good fit for my child?</div>
+        <div class="faq-a">If after 2–3 sessions you feel the match isn't right, simply let us know and we will reassign your child to a different guide at no charge, with BTH updating the teaching approach as needed, and with no disruption to their schedule. Finding the right match matters more to us than any administrative convenience. We make the change quickly and without question.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can my child have guided sessions in more than one subject?</div>
+        <div class="faq-a">Yes. Each subject is a separate enrollment and a separate weekly session. Many families start with one subject, see results, and add a second in the following term. Each subject gets its own BTHI-designed teaching plan and its own dedicated guide. Sessions are scheduled on different days for manageable pacing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the BTHI Guided Homeschooling program aligned with the DepEd homeschool curriculum?</div>
+        <div class="faq-a">Yes. BTHI designs every guide's teaching plan in alignment with DepEd's K-10 curriculum for local track students, and with US curriculum standards for US Enrollment and Dual Accreditation students. Guided sessions are built directly into your child's portfolio requirements — nothing taught in isolation from the homeschool system.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I pay and what happens after I enroll?</div>
+        <div class="faq-a">After submitting your enrollment, our team will contact you within 24–48 hours to confirm your subject, preferred schedule, and payment details. Payment can be made via GCash, Maya, bank transfer, or credit card. Once payment is confirmed, your guide will be assigned. BTHI will use the intake information to begin building your child's personalised teaching plan — so Session 1 is already purposeful and ready.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="fc-inner">
+    <div class="hero-badge" style="margin-bottom:24px;">📚 Better Together Homeschool International (BTHI) · Weekly Guided Homeschooling</div>
+    <h2>One hour a week.<br><em>Your child's whole year changes.</em></h2>
+    <p>Join 200+ BTHI families who discovered that the right support — at the right time — doesn't need to be complicated. Just one guided hour a week, where BTHI has already told the guide exactly what to teach and how to teach it for your child. That's the BTH difference.</p>
+    <div class="btn-pair">
+      <a href="https://www.bettertogetherhomeschool.com/contact-us" class="btn">
+        Enroll Now — Secure Your Slot<br>
+        <small style="font-weight:500;font-size:.82em;">Start the enrollment in the next 2 minutes</small>
+      </a>
+    </div>
+    <span class="btn-note">For BTHI-enrolled students · Limited guide slots per term</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <p style="margin-bottom:6px; color:rgba(255,255,255,.6); font-family:'Fraunces',serif; font-size:1rem;">Better Together Homeschool International</p>
+  <p style="margin-bottom:8px;">
+    <a href="https://www.bettertogetherhomeschool.com">Home</a> &nbsp;·&nbsp;
+    <a href="https://www.bettertogetherhomeschool.com/programs">Programs</a> &nbsp;·&nbsp;
+    <a href="https://www.bettertogetherhomeschool.com/contact-us">Contact Us</a>
+  </p>
+  <p>© 2020–2026 Better Together Homeschool International · All rights reserved · DepEd-Recognized · US-Accredited</p>
+  <p style="margin-top:8px;font-size:.68rem;color:rgba(255,255,255,.2);">Better Together Homeschool International (BTHI) Weekly Guided Homeschooling is exclusively available to BTHI-enrolled students. Every session is guided by a BTHI-directed teaching plan personalised for your child's learning style and needs. Pricing subject to change. Limited slots available per term per guide.</p>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+// Synced countdown — 9h 44m 33s
+(function(){
+  const END = Date.now() + (9*3600 + 44*60 + 33)*1000;
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    const d = Math.max(0, END - Date.now());
+    const h = Math.floor(d/3600000);
+    const m = Math.floor((d%3600000)/60000);
+    const s = Math.floor((d%60000)/1000);
+    // urgency bar
+    document.getElementById('uh').textContent = pad(h);
+    document.getElementById('um').textContent = pad(m);
+    document.getElementById('us').textContent = pad(s);
+    // big timer
+    document.getElementById('bh').textContent = pad(h);
+    document.getElementById('bm').textContent = pad(m);
+    document.getElementById('bs').textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    const a = this.nextElementSibling;
+    const wasOpen = a.classList.contains('show');
+    document.querySelectorAll('.faq-a').forEach(function(el){ el.classList.remove('show'); });
+    document.querySelectorAll('.faq-q').forEach(function(el){ el.classList.remove('open'); });
+    if(!wasOpen){ a.classList.add('show'); this.classList.add('open'); }
+  });
+});
+</script>
+
+<!-- ════════════════════════════════════════════════════
+     CLICK-TO-EDIT SYSTEM
+     ● Click any text to edit it live
+     ● Floating toolbar: Add sections, cards, testimonials, FAQs
+     ● Delete buttons appear on hoverable blocks
+     ● Changes auto-saved to localStorage
+     ● Download button exports the final HTML
+════════════════════════════════════════════════════ -->
+<style>
+/* ── EDITOR MODE INDICATOR ── */
+body.edit-mode-on { outline:none; }
+
+/* ── EDIT MODE TOGGLE BUTTON ── */
+#edit-toggle {
+  position:fixed;
+  bottom:28px; right:28px;
+  z-index:9000;
+  background:#003d80;
+  color:#fff;
+  border:3px solid #c8a415;
+  border-radius:50px;
+  padding:12px 22px;
+  font-family:'Outfit',sans-serif;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 6px 24px rgba(0,0,0,.25);
+  display:flex; align-items:center; gap:8px;
+  transition:background .2s, transform .15s;
+  user-select:none;
+}
+#edit-toggle:hover { background:#004fa3; transform:translateY(-2px); }
+#edit-toggle.active { background:#c8a415; color:#0d1a2e; border-color:#003d80; }
+#edit-toggle .etoggle-dot {
+  width:10px; height:10px; border-radius:50%;
+  background:#c8a415;
+  transition:background .2s;
+  flex-shrink:0;
+}
+#edit-toggle.active .etoggle-dot { background:#003d80; }
+
+/* ── EDITABLE ELEMENT HIGHLIGHT ── */
+body.edit-mode-on [contenteditable="true"] {
+  outline:2px dashed rgba(200,164,21,.6) !important;
+  outline-offset:2px;
+  border-radius:3px;
+  cursor:text;
+  transition:outline .15s;
+  min-width:20px; min-height:1em;
+}
+body.edit-mode-on [contenteditable="true"]:hover {
+  outline:2px solid rgba(200,164,21,.9) !important;
+  background:rgba(200,164,21,.04) !important;
+}
+body.edit-mode-on [contenteditable="true"]:focus {
+  outline:2px solid #c8a415 !important;
+  background:rgba(200,164,21,.06) !important;
+  box-shadow:0 0 0 4px rgba(200,164,21,.12);
+}
+
+/* ── EDIT TOOLTIP ── */
+.edit-tooltip {
+  position:absolute;
+  top:-28px; left:0;
+  background:#0d1a2e;
+  color:#c8a415;
+  font-family:'Outfit',sans-serif;
+  font-size:.6rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase;
+  padding:3px 8px; border-radius:4px;
+  white-space:nowrap; pointer-events:none;
+  opacity:0; transition:opacity .15s;
+  z-index:9001;
+}
+body.edit-mode-on [contenteditable="true"]:hover .edit-tooltip,
+body.edit-mode-on [contenteditable="true"]:focus .edit-tooltip { opacity:1; }
+
+/* ── BLOCK CONTROLS (delete / duplicate) ── */
+body.edit-mode-on .editable-block {
+  position:relative;
+}
+body.edit-mode-on .editable-block:hover > .block-controls,
+body.edit-mode-on .editable-block:focus-within > .block-controls {
+  opacity:1; pointer-events:all;
+}
+.block-controls {
+  position:absolute;
+  top:8px; right:8px;
+  display:flex; gap:6px;
+  opacity:0; pointer-events:none;
+  transition:opacity .18s;
+  z-index:8000;
+}
+.bc-btn {
+  width:28px; height:28px; border-radius:6px;
+  border:none; cursor:pointer;
+  font-size:.82rem; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  transition:transform .15s, opacity .15s;
+  font-family:'Outfit',sans-serif;
+}
+.bc-btn:hover { transform:scale(1.15); }
+.bc-delete { background:#c0303a; color:#fff; }
+.bc-duplicate { background:#003d80; color:#c8a415; }
+.bc-up { background:#555; color:#fff; }
+.bc-down { background:#555; color:#fff; }
+
+/* ── FLOATING ADD TOOLBAR ── */
+#add-toolbar {
+  position:fixed;
+  top:50%; left:24px;
+  transform:translateY(-50%);
+  z-index:9000;
+  display:flex; flex-direction:column; gap:8px;
+  opacity:0; pointer-events:none;
+  transition:opacity .2s;
+}
+body.edit-mode-on #add-toolbar { opacity:1; pointer-events:all; }
+.add-btn {
+  background:#003d80;
+  color:#fff;
+  border:2px solid #c8a415;
+  border-radius:10px;
+  padding:8px 14px;
+  font-family:'Outfit',sans-serif;
+  font-size:.68rem; font-weight:800;
+  letter-spacing:.06em; text-transform:uppercase;
+  cursor:pointer;
+  white-space:nowrap;
+  display:flex; align-items:center; gap:6px;
+  transition:background .15s, transform .15s;
+  box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+.add-btn:hover { background:#c8a415; color:#0d1a2e; transform:translateX(3px); }
+.add-btn .ab-ico { font-size:.95rem; }
+
+/* ── SAVE INDICATOR ── */
+#save-indicator {
+  position:fixed;
+  top:60px; right:28px;
+  z-index:9000;
+  background:#003d80;
+  color:#c8a415;
+  border:2px solid #c8a415;
+  border-radius:8px;
+  padding:8px 18px;
+  font-family:'Outfit',sans-serif;
+  font-size:.7rem; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase;
+  opacity:0;
+  transition:opacity .3s;
+  pointer-events:none;
+}
+#save-indicator.show { opacity:1; }
+
+/* ── DOWNLOAD BUTTON ── */
+#download-btn {
+  position:fixed;
+  bottom:28px; left:28px;
+  z-index:9000;
+  background:#c8a415;
+  color:#0d1a2e;
+  border:3px solid #003d80;
+  border-radius:50px;
+  padding:12px 22px;
+  font-family:'Outfit',sans-serif;
+  font-size:.82rem; font-weight:800;
+  letter-spacing:.06em; text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 6px 24px rgba(0,0,0,.2);
+  display:flex; align-items:center; gap:8px;
+  transition:background .2s, transform .15s;
+  opacity:0; pointer-events:none;
+  transition:opacity .2s, transform .15s, background .2s;
+}
+body.edit-mode-on #download-btn { opacity:1; pointer-events:all; }
+#download-btn:hover { background:#ddb824; transform:translateY(-2px); }
+
+/* ── ADD BLOCK GHOST (drop zone indicator) ── */
+.add-ghost {
+  border:2px dashed rgba(200,164,21,.4);
+  border-radius:14px;
+  padding:18px;
+  text-align:center;
+  font-family:'Outfit',sans-serif;
+  font-size:.75rem; font-weight:700;
+  color:rgba(200,164,21,.5);
+  letter-spacing:.1em; text-transform:uppercase;
+  margin:10px 0;
+  cursor:pointer;
+  transition:border-color .2s, color .2s, background .2s;
+}
+.add-ghost:hover {
+  border-color:rgba(200,164,21,.9);
+  color:#c8a415;
+  background:rgba(200,164,21,.04);
+}
+
+/* ── MODAL ── */
+#editor-modal {
+  display:none;
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:9900;
+  align-items:center; justify-content:center;
+}
+#editor-modal.open { display:flex; }
+.modal-box {
+  background:#fff;
+  border:3px solid #c8a415;
+  border-radius:16px;
+  padding:32px;
+  max-width:480px; width:90%;
+  font-family:'Outfit',sans-serif;
+}
+.modal-box h3 {
+  font-family:'Fraunces',serif;
+  font-size:1.2rem; font-weight:700;
+  color:#003d80; margin-bottom:18px;
+}
+.modal-box label { display:block; font-size:.75rem; font-weight:700; color:#6a7a98; letter-spacing:.08em; text-transform:uppercase; margin-bottom:5px; margin-top:14px; }
+.modal-box input, .modal-box textarea, .modal-box select {
+  width:100%; border:1.5px solid #c8d4e8; border-radius:8px;
+  padding:10px 12px; font-family:'Outfit',sans-serif; font-size:.88rem;
+  color:#0d1a2e; background:#fafbff;
+  transition:border-color .15s;
+}
+.modal-box input:focus, .modal-box textarea:focus { outline:none; border-color:#c8a415; }
+.modal-box textarea { min-height:80px; resize:vertical; }
+.modal-btns { display:flex; gap:10px; margin-top:20px; justify-content:flex-end; }
+.modal-cancel { background:#eaeef8; color:#3a4a6a; border:none; border-radius:8px; padding:10px 20px; font-family:'Outfit',sans-serif; font-weight:700; cursor:pointer; }
+.modal-ok { background:#003d80; color:#c8a415; border:none; border-radius:8px; padding:10px 20px; font-family:'Outfit',sans-serif; font-weight:800; cursor:pointer; }
+.modal-ok:hover { background:#c8a415; color:#0d1a2e; }
+
+/* ── EDIT MODE: block hover ring ── */
+body.edit-mode-on .editable-block:hover {
+  box-shadow:0 0 0 2px rgba(200,164,21,.35);
+  border-radius:var(--r2,16px);
+}
+
+/* hide controls in print / non-edit */
+@media print {
+  #edit-toggle, #add-toolbar, #download-btn, #save-indicator,
+  .block-controls, #editor-modal { display:none !important; }
+  [contenteditable] { outline:none !important; }
+}
+</style>
+
+<!-- TOGGLE BUTTON -->
+<button id="edit-toggle" onclick="toggleEdit()" title="Click to enable editing">
+  <span class="etoggle-dot"></span>
+  <span id="etoggle-label">✏️ Edit Page</span>
+</button>
+
+<!-- SAVE INDICATOR -->
+<div id="save-indicator">✓ Saved</div>
+
+<!-- DOWNLOAD -->
+<button id="download-btn" onclick="downloadPage()" title="Download your edited page">
+  ⬇ Download Page
+</button>
+
+<!-- FLOATING ADD TOOLBAR -->
+<div id="add-toolbar">
+  <div style="font-size:.58rem;font-weight:800;color:rgba(0,61,128,.5);letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px;padding-left:4px;">Add</div>
+  <button class="add-btn" onclick="openModal('section')"><span class="ab-ico">📄</span> Section</button>
+  <button class="add-btn" onclick="openModal('card')"><span class="ab-ico">🃏</span> Card</button>
+  <button class="add-btn" onclick="openModal('testimonial')"><span class="ab-ico">⭐</span> Testimonial</button>
+  <button class="add-btn" onclick="openModal('faq')"><span class="ab-ico">❓</span> FAQ</button>
+  <button class="add-btn" onclick="openModal('subject')"><span class="ab-ico">📚</span> Subject</button>
+  <button class="add-btn" onclick="openModal('bullet')"><span class="ab-ico">✅</span> Bullet Point</button>
+</div>
+
+<!-- ADD MODAL -->
+<div id="editor-modal">
+  <div class="modal-box">
+    <h3 id="modal-title">Add New Item</h3>
+    <div id="modal-fields"></div>
+    <div class="modal-btns">
+      <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+      <button class="modal-ok" onclick="commitAdd()">Add It →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════
+   CLICK-TO-EDIT ENGINE
+═══════════════════════════════════════ */
+
+let editMode = false;
+let currentAddType = '';
+let saveTimer = null;
+
+// ── SELECTORS: everything that should be editable ──
+const EDITABLE_SELECTORS = [
+  'h1','h2','h3','h4','h5',
+  'p','li','blockquote',
+  '.hero-sub','.hero-proof','.hero-badge',
+  '.htitle','.htitle em',
+  '.brand-name','.brand-sub',
+  '.sec-label-text','.kicker','.lbl',
+  '.insight-box .big',
+  '.bonus-name','.bonus-tagline','.bonus-desc',
+  '.hc-num','.hc-label',
+  '.tname','.trole','.qt','.stars',
+  '.slevel','.subject-card p',
+  '.ival','.icard p','.icard h5',
+  '.price-was','.price-freq','.price-sub',
+  '.guarantee h4','.guarantee p',
+  '.faq-a',
+  '.mq-text',
+  '.bio-name','.bio-title','.bio-body',
+  '.vp','.vi',
+  '.btn','.btn-outline',
+  '.hpill',
+  '.bbadge',
+  '.enroll-sub',
+  '.rcard h4','.rcard p','.rcard .pot',
+  '.cmp-verdict',
+  '.timing-badge',
+  '.problem-tag p',
+  '.inside-pill',
+  '.notfor ul li','.req-box ul li','.wcard ul li',
+  '.oi-name','.oi-desc',
+  '.oi-tag',
+  '.urgency'
+].join(',');
+
+// ── BLOCK SELECTORS: things that can be deleted/duplicated ──
+const BLOCK_SELECTORS = [
+  '.icard',
+  '.tcard',
+  '.faq-item',
+  '.subject-card',
+  '.wcard',
+  '.mblock',
+  '.mq-item',
+  '.bonus-card',
+  '.hpill',
+  '.pain-list li',
+  '.who-card',
+  '.roi-card, .rcard',
+  '.sys-step',
+  '.inc-card',
+  '.tl-step',
+  '.offer-item',
+  '.sc-card',
+  '.gp',
+  '.bbadge'
+].join(',');
+
+/* ── TOGGLE EDIT MODE ── */
+function toggleEdit() {
+  editMode = !editMode;
+  document.body.classList.toggle('edit-mode-on', editMode);
+  const btn = document.getElementById('edit-toggle');
+  const lbl = document.getElementById('etoggle-label');
+  btn.classList.toggle('active', editMode);
+  lbl.textContent = editMode ? '✓ Done Editing' : '✏️ Edit Page';
+
+  if (editMode) {
+    makeEditable();
+    addBlockControls();
+    restoreFromStorage();
+  } else {
+    saveToStorage();
+    showSaved();
+  }
+}
+
+/* ── MAKE ALL TEXT EDITABLE ── */
+function makeEditable() {
+  // Exclude buttons that are functional (timer, FAQ triggers)
+  const excludedClasses = ['urgency','faq-q'];
+  document.querySelectorAll(EDITABLE_SELECTORS).forEach(function(el) {
+    if (el.closest('#edit-toggle') || el.closest('#add-toolbar') ||
+        el.closest('#save-indicator') || el.closest('#download-btn') ||
+        el.closest('#editor-modal') || el.closest('.block-controls') ||
+        el.classList.contains('faq-q')) return;
+
+    el.setAttribute('contenteditable','true');
+    el.setAttribute('spellcheck','false');
+    el.style.position = el.style.position || 'relative';
+
+    // on input → queue autosave
+    el.addEventListener('input', queueSave);
+
+    // prevent Enter making block-level mess in inline elements
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        const tag = el.tagName.toLowerCase();
+        if (!['p','div','blockquote'].includes(tag)) {
+          e.preventDefault();
+        }
+      }
+    });
+  });
+}
+
+/* ── ADD BLOCK CONTROLS ── */
+function addBlockControls() {
+  document.querySelectorAll(BLOCK_SELECTORS).forEach(function(el) {
+    if (el.closest('#edit-toggle') || el.closest('#add-toolbar') ||
+        el.closest('#editor-modal') || el.querySelector('.block-controls')) return;
+
+    el.classList.add('editable-block');
+
+    const controls = document.createElement('div');
+    controls.className = 'block-controls';
+
+    // Duplicate button
+    const dupBtn = document.createElement('button');
+    dupBtn.className = 'bc-btn bc-duplicate';
+    dupBtn.title = 'Duplicate';
+    dupBtn.textContent = '⧉';
+    dupBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const clone = el.cloneNode(true);
+      // remove block-controls from clone to avoid duplication
+      clone.querySelectorAll('.block-controls').forEach(b => b.remove());
+      clone.classList.remove('editable-block');
+      el.parentNode.insertBefore(clone, el.nextSibling);
+      // re-process clone
+      clone.classList.add('editable-block');
+      makeEditableOn(clone);
+      addControlsTo(clone);
+      queueSave();
+    });
+
+    // Delete button
+    const delBtn = document.createElement('button');
+    delBtn.className = 'bc-btn bc-delete';
+    delBtn.title = 'Delete';
+    delBtn.textContent = '✕';
+    delBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (confirm('Delete this block?')) {
+        el.remove();
+        queueSave();
+      }
+    });
+
+    controls.appendChild(dupBtn);
+    controls.appendChild(delBtn);
+    el.appendChild(controls);
+  });
+}
+
+function makeEditableOn(el) {
+  el.querySelectorAll(EDITABLE_SELECTORS).forEach(function(child) {
+    if (child.closest('.block-controls')) return;
+    child.setAttribute('contenteditable','true');
+    child.setAttribute('spellcheck','false');
+    child.addEventListener('input', queueSave);
+  });
+}
+
+function addControlsTo(el) {
+  if (el.querySelector('.block-controls')) return;
+  el.classList.add('editable-block');
+  const controls = document.createElement('div');
+  controls.className = 'block-controls';
+
+  const dupBtn = document.createElement('button');
+  dupBtn.className = 'bc-btn bc-duplicate'; dupBtn.title='Duplicate'; dupBtn.textContent='⧉';
+  dupBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const clone = el.cloneNode(true);
+    clone.querySelectorAll('.block-controls').forEach(b=>b.remove());
+    clone.classList.remove('editable-block');
+    el.parentNode.insertBefore(clone, el.nextSibling);
+    clone.classList.add('editable-block');
+    makeEditableOn(clone);
+    addControlsTo(clone);
+    queueSave();
+  });
+
+  const delBtn = document.createElement('button');
+  delBtn.className = 'bc-btn bc-delete'; delBtn.title='Delete'; delBtn.textContent='✕';
+  delBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (confirm('Delete this block?')) { el.remove(); queueSave(); }
+  });
+
+  controls.appendChild(dupBtn);
+  controls.appendChild(delBtn);
+  el.appendChild(controls);
+}
+
+/* ── AUTOSAVE ── */
+function queueSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToStorage, 1200);
+}
+
+function saveToStorage() {
+  try {
+    // Save the body innerHTML (minus editor controls)
+    const clone = document.body.cloneNode(true);
+    // strip editor injected elements from saved version
+    ['#edit-toggle','#add-toolbar','#save-indicator','#download-btn','#editor-modal','.block-controls']
+      .forEach(sel => clone.querySelectorAll(sel).forEach(el=>el.remove()));
+    clone.querySelectorAll('[contenteditable]').forEach(el=>{
+      el.removeAttribute('contenteditable');
+      el.removeAttribute('spellcheck');
+    });
+    clone.querySelectorAll('.editable-block').forEach(el=>el.classList.remove('editable-block'));
+    clone.classList.remove('edit-mode-on');
+    localStorage.setItem('bth_page_content', clone.innerHTML);
+    showSaved();
+  } catch(e) { console.warn('Save failed:', e); }
+}
+
+function restoreFromStorage() {
+  // Don't auto-restore — user can download and reopen to persist
+  // This avoids destructive overwrites on fresh opens
+}
+
+function showSaved() {
+  const ind = document.getElementById('save-indicator');
+  ind.classList.add('show');
+  setTimeout(()=> ind.classList.remove('show'), 1800);
+}
+
+/* ── MODAL SYSTEM ── */
+const MODAL_CONFIGS = {
+  section: {
+    title: 'Add New Section',
+    fields: [
+      {id:'sec_label', label:'Section Label (small caps above title)', placeholder:'e.g. Why It Works'},
+      {id:'sec_title', label:'Main Heading', placeholder:'e.g. The reason one hour <em>changes everything</em>'},
+      {id:'sec_body',  label:'Body Paragraph', placeholder:'Your paragraph text here…', type:'textarea'},
+      {id:'sec_bg',    label:'Background Style', type:'select',
+       options:['Ivory (default)','Blue — dark','Blue — pale','Gold — pale','Linen — warm']}
+    ]
+  },
+  card: {
+    title: 'Add New Include Card',
+    fields: [
+      {id:'card_icon',  label:'Emoji Icon', placeholder:'🎯'},
+      {id:'card_title', label:'Card Title', placeholder:'e.g. Weekly Progress Check-In'},
+      {id:'card_desc',  label:'Description', placeholder:'What this includes and why it matters…', type:'textarea'},
+      {id:'card_val',   label:'Value Label', placeholder:'e.g. FREE (Value: ₱999)'}
+    ]
+  },
+  testimonial: {
+    title: 'Add New Testimonial',
+    fields: [
+      {id:'testi_initials', label:'Initials (2 letters)', placeholder:'e.g. JD'},
+      {id:'testi_name',     label:'Full Name', placeholder:'e.g. Jane D.'},
+      {id:'testi_role',     label:'Role / Location', placeholder:'e.g. OFW Parent · Dubai'},
+      {id:'testi_quote',    label:'Testimonial Quote', placeholder:'Your quote here…', type:'textarea'}
+    ]
+  },
+  faq: {
+    title: 'Add New FAQ',
+    fields: [
+      {id:'faq_q', label:'Question', placeholder:'e.g. How does the session work?'},
+      {id:'faq_a', label:'Answer', placeholder:'Your full answer here…', type:'textarea'}
+    ]
+  },
+  subject: {
+    title: 'Add New Subject Card',
+    fields: [
+      {id:'sub_icon',  label:'Emoji Icon', placeholder:'📐'},
+      {id:'sub_title', label:'Subject Name', placeholder:'e.g. Social Studies'},
+      {id:'sub_desc',  label:'Description', placeholder:'What is covered in this subject…', type:'textarea'},
+      {id:'sub_level', label:'Grade Level', placeholder:'e.g. Grade 3 – Grade 10'}
+    ]
+  },
+  bullet: {
+    title: 'Add Bullet Point to a List',
+    fields: [
+      {id:'bullet_text', label:'Bullet Text', placeholder:'e.g. Includes weekly progress summary'},
+      {id:'bullet_target', label:'Add to which list?', type:'select',
+       options:['Pain list (hero section)','Who it\'s for cards','Requirement box','Not-for list']}
+    ]
+  }
+};
+
+function openModal(type) {
+  currentAddType = type;
+  const cfg = MODAL_CONFIGS[type];
+  if (!cfg) return;
+  document.getElementById('modal-title').textContent = cfg.title;
+  const fieldsEl = document.getElementById('modal-fields');
+  fieldsEl.innerHTML = '';
+  cfg.fields.forEach(function(f) {
+    const lbl = document.createElement('label');
+    lbl.textContent = f.label;
+    fieldsEl.appendChild(lbl);
+    let input;
+    if (f.type === 'textarea') {
+      input = document.createElement('textarea');
+    } else if (f.type === 'select') {
+      input = document.createElement('select');
+      f.options.forEach(function(opt) {
+        const o = document.createElement('option');
+        o.value = opt; o.textContent = opt;
+        input.appendChild(o);
+      });
+    } else {
+      input = document.createElement('input');
+      input.type = 'text';
+      if (f.placeholder) input.placeholder = f.placeholder;
+    }
+    input.id = f.id;
+    fieldsEl.appendChild(input);
+  });
+  document.getElementById('editor-modal').classList.add('open');
+  // focus first input
+  setTimeout(function() { fieldsEl.querySelector('input,textarea,select').focus(); }, 80);
+}
+
+function closeModal() {
+  document.getElementById('editor-modal').classList.remove('open');
+}
+
+function val(id) {
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : '';
+}
+
+function commitAdd() {
+  let newEl = null;
+
+  switch(currentAddType) {
+
+    case 'section': {
+      const bgMap = {
+        'Ivory (default)':'','Blue — dark':'sec-forest','Blue — pale':'sec-forest-pale',
+        'Gold — pale':'sec-sun-pale','Linen — warm':'sec-linen'
+      };
+      const bgClass = bgMap[val('sec_bg')] || '';
+      const div = document.createElement('section');
+      div.className = 'sec ' + bgClass;
+      div.innerHTML = `<div class="wrap" style="text-align:center;">
+        <div class="sec-label" style="justify-content:center;">
+          <div class="sec-rule"></div>
+          <span class="sec-label-text">${escHtml(val('sec_label'))}</span>
+        </div>
+        <h2 class="htitle">${val('sec_title') || 'New Section Heading'}</h2>
+        <div class="body-rule" style="margin:0 auto 28px;"></div>
+        <p style="color:var(--body);max-width:600px;margin:0 auto;font-size:.9rem;">${escHtml(val('sec_body'))}</p>
+      </div>`;
+      // Insert before footer
+      const footer = document.querySelector('footer.footer') || document.querySelector('.footer') || document.body.lastElementChild;
+      footer.parentNode.insertBefore(div, footer);
+      newEl = div;
+      break;
+    }
+
+    case 'card': {
+      const grid = document.querySelector('.inc-grid');
+      if (!grid) { alert('No include card grid found on page.'); closeModal(); return; }
+      const div = document.createElement('div');
+      div.className = 'icard';
+      div.innerHTML = `<div class="iico">${val('card_icon') || '🎯'}</div>
+        <div>
+          <h5>${escHtml(val('card_title') || 'New Card')}</h5>
+          <p>${escHtml(val('card_desc'))}</p>
+          <div class="ival">${escHtml(val('card_val') || 'Included')}</div>
+        </div>`;
+      grid.appendChild(div);
+      newEl = div;
+      div.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+
+    case 'testimonial': {
+      const grid = document.querySelector('.tgrid');
+      if (!grid) { alert('No testimonial grid found on page.'); closeModal(); return; }
+      const div = document.createElement('div');
+      div.className = 'tcard';
+      const initials = (val('testi_initials') || 'AB').substring(0,2).toUpperCase();
+      div.innerHTML = `<div class="stars">★★★★★</div>
+        <p class="qt">"${escHtml(val('testi_quote') || 'Your testimonial goes here.')}"</p>
+        <div class="tauthor">
+          <div class="tav">${escHtml(initials)}</div>
+          <div>
+            <div class="tname">${escHtml(val('testi_name') || 'Parent Name')}</div>
+            <div class="trole">${escHtml(val('testi_role') || 'Role · Location')}</div>
+          </div>
+        </div>`;
+      grid.appendChild(div);
+      newEl = div;
+      div.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+
+    case 'faq': {
+      const faqList = document.querySelector('.faq-list');
+      if (!faqList) { alert('No FAQ list found on page.'); closeModal(); return; }
+      const div = document.createElement('div');
+      div.className = 'faq-item';
+      div.innerHTML = `<div class="faq-q">${escHtml(val('faq_q') || 'New Question?')}</div>
+        <div class="faq-a">${escHtml(val('faq_a') || 'Your answer here.')}</div>`;
+      faqList.appendChild(div);
+      // wire accordion
+      const q = div.querySelector('.faq-q');
+      q.addEventListener('click', function() {
+        const a = this.nextElementSibling;
+        const wasOpen = a.classList.contains('show');
+        document.querySelectorAll('.faq-a').forEach(el=>el.classList.remove('show'));
+        document.querySelectorAll('.faq-q').forEach(el=>el.classList.remove('open'));
+        if(!wasOpen){ a.classList.add('show'); this.classList.add('open'); }
+      });
+      newEl = div;
+      div.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+
+    case 'subject': {
+      const grid = document.querySelector('.subject-grid');
+      if (!grid) { alert('No subject grid found on page.'); closeModal(); return; }
+      const div = document.createElement('div');
+      div.className = 'subject-card';
+      div.innerHTML = `<div class="sico">${val('sub_icon') || '📐'}</div>
+        <h4>${escHtml(val('sub_title') || 'New Subject')}</h4>
+        <p>${escHtml(val('sub_desc') || 'Description here.')}</p>
+        <div class="slevel">${escHtml(val('sub_level') || 'All grades')}</div>`;
+      grid.appendChild(div);
+      newEl = div;
+      div.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+
+    case 'bullet': {
+      const targetMap = {
+        'Pain list (hero section)': '.pain-list',
+        "Who it's for cards":       '.wcard ul',
+        'Requirement box':          '.req-box ul',
+        'Not-for list':             '.notfor ul'
+      };
+      const sel = targetMap[val('bullet_target')];
+      const list = document.querySelector(sel);
+      if (!list) { alert('List not found on page.'); closeModal(); return; }
+      const li = document.createElement('li');
+      li.textContent = val('bullet_text') || 'New bullet point';
+      list.appendChild(li);
+      newEl = li;
+      li.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+  }
+
+  closeModal();
+  if (newEl) {
+    makeEditableOn(newEl);
+    addControlsTo(newEl);
+    newEl.style.outline = '2px solid #c8a415';
+    setTimeout(()=>{ newEl.style.outline = ''; }, 1600);
+    queueSave();
+  }
+}
+
+/* ── DOWNLOAD ── */
+function downloadPage() {
+  // Build a clean copy of current page
+  const doctype = '<!DOCTYPE html>\n';
+  const clone = document.documentElement.cloneNode(true);
+
+  // Remove editor injections
+  ['#edit-toggle','#add-toolbar','#save-indicator','#download-btn','#editor-modal','.block-controls']
+    .forEach(sel => clone.querySelectorAll(sel).forEach(el=>el.remove()));
+
+  // Remove editor styles
+  clone.querySelectorAll('style').forEach(function(s) {
+    if (s.textContent.includes('CLICK-TO-EDIT ENGINE') ||
+        s.textContent.includes('edit-toggle') ||
+        s.textContent.includes('editable-block')) s.remove();
+  });
+
+  // Remove editor scripts
+  clone.querySelectorAll('script').forEach(function(s) {
+    if (s.textContent.includes('toggleEdit') ||
+        s.textContent.includes('CLICK-TO-EDIT ENGINE')) s.remove();
+  });
+
+  // Remove contenteditable and edit classes
+  clone.querySelectorAll('[contenteditable]').forEach(el=>{
+    el.removeAttribute('contenteditable');
+    el.removeAttribute('spellcheck');
+  });
+  clone.querySelectorAll('.editable-block').forEach(el=>el.classList.remove('editable-block'));
+  clone.classList.remove('edit-mode-on');
+
+  const html = doctype + clone.outerHTML;
+  const blob = new Blob([html], {type:'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'bth-guided-homeschooling-edited.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+/* ── HELPERS ── */
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+// Close modal on backdrop click
+document.getElementById('editor-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Keyboard shortcut: Ctrl+E to toggle edit, Escape to close modal
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'e') { e.preventDefault(); toggleEdit(); }
+  if (e.key === 'Escape') closeModal();
+});
+
+// Show a subtle "Edit Page" hint on first load
+setTimeout(function() {
+  const btn = document.getElementById('edit-toggle');
+  btn.style.animation = 'none';
+  btn.style.transform = 'translateY(-4px)';
+  setTimeout(()=>{ btn.style.transform = ''; }, 600);
+}, 1200);
+</script>
+
+</body>
+</html>
